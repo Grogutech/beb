@@ -33,7 +33,7 @@ getgenv().Settings = {
     },
 
     Seller = {
-        Active = true,
+        Active = false,
 
         Items = {
             ["Crystal Key"] = {Class = "Misc", Price = 31000},
