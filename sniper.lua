@@ -29,7 +29,7 @@ getgenv().Settings = {
         GlobalSnipes = true,
         RemoveUsername = false,
 
-        SwitchToSelling = "Low Diamonds (50000)" --// TEMP. Low Diamonds, Limits Reached, .. Minutes, N/A
+        SwitchToSelling = "N/A" --// TEMP. Low Diamonds, Limits Reached, .. Minutes, N/A -- Low Diamonds (50000)
     },
 
     Seller = {
