@@ -7,9 +7,7 @@ getgenv().Settings = {
         Items = {
             SearchTerminal = {
                 ["Crystal Key"] = {Class = "Misc", Price = "1%"},
-                ["Crystal Key Upper Half"] = {Class = "Misc", Price = "1%"},
                 ["Secret Key"] = {Class = "Misc", Price = "1%"},
-                ["Secret Key Upper Half"] = {Class = "Misc", Price = "1%"},
             },
             ["All Huges"] = {Class = "Pet", Price = "15%", UseCosmicValues = true},
             ["Gift Bag"] = {Class = "Misc", Price = "30%"},
@@ -17,6 +15,8 @@ getgenv().Settings = {
             ["Mini Chest"] = {Class = "Misc", Price = "25%"},
             ["Tech Key"] = {Class = "Misc", Price = "25%"},
             ["Void Key"] = {Class = "Misc", Price = "75%"},
+            ["Secret Key Upper Half"] = {Class = "Misc", Price = "1%"},
+            ["Crystal Key Upper Half"] = {Class = "Misc", Price = "1%"},
         },
         
         Serverhop = true,
