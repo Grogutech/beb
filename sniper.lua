@@ -19,7 +19,7 @@ getgenv().Settings = {
             ["Crystal Key Upper Half"] = {Class = "Misc", Price = "1%"},
         },
         
-        Serverhop = true,
+        Serverhop = false,
         TeleportDelay = 20,
         UseProPlaza = false,
         RecheckListingsDelay = 1,
