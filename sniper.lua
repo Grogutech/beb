@@ -20,7 +20,7 @@ getgenv().Settings = {
         },
         
         Serverhop = true,
-        TeleportDelay = 10,
+        TeleportDelay = 20,
         UseProPlaza = false,
         RecheckListingsDelay = 1,
     
