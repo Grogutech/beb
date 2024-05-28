@@ -9,7 +9,6 @@ getgenv().Settings = {
                 ["Crystal Key"] = {Class = "Misc", Price = "1%"},
                 ["Secret Key"] = {Class = "Misc", Price = "1%"},
             },
-            ["All Huges"] = {Class = "Pet", Price = "50%", UseCosmicValues = true},
             ["Gift Bag"] = {Class = "Misc", Price = "30%"},
             ["Large Gift Bag"] = {Class = "Misc", Price = "30%"},
             ["Mini Chest"] = {Class = "Misc", Price = "25%"},
