@@ -1,41 +1,3 @@
-local SERVER_URL = "http://192.168.68.54:8088"
-
-local data = request(
-    {
-        Url = SERVER_URL,
-        Method = "GET"
-    }
-)
-
-local heartbeatDelay = game.HttpService:JSONDecode(data.Body)["heartbeatDelay"]
-
-local function sendRequest(reqType)
-    return request(
-        {
-            Url = SERVER_URL,
-            Method = "POST",
-            Body = {
-                requestType = reqType,
-                account = game:GetService("Players").LocalPlayer.Name
-            }
-        }
-    )
-end
-
-sendRequest("START")
-
-game:GetService("NetworkClient").ChildRemoved:Connect(function()
-    while true do
-        sendRequest("DISCONNECTED")
-        task.wait(1)
-    end
-end)
-
-while true do
-    sendRequest("HEARTBEAT")
-    task.wait(heartbeatDelay)
-end
-
 getgenv().Settings = {
     StartWith = "Sniper",
 
@@ -92,3 +54,42 @@ getgenv().Settings = {
     [[ Thank you for using System Exodus <3! ]]
 }
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/f05f01a77417ee52d29956defa8037f7.lua"))()
+
+
+local SERVER_URL = "http://192.168.68.54:8088"
+
+local data = request(
+    {
+        Url = SERVER_URL,
+        Method = "GET"
+    }
+)
+
+local heartbeatDelay = game.HttpService:JSONDecode(data.Body)["heartbeatDelay"]
+
+local function sendRequest(reqType)
+    return request(
+        {
+            Url = SERVER_URL,
+            Method = "POST",
+            Body = {
+                requestType = reqType,
+                account = game:GetService("Players").LocalPlayer.Name
+            }
+        }
+    )
+end
+
+sendRequest("START")
+
+game:GetService("NetworkClient").ChildRemoved:Connect(function()
+    while true do
+        sendRequest("DISCONNECTED")
+        task.wait(1)
+    end
+end)
+
+while true do
+    sendRequest("HEARTBEAT")
+    task.wait(heartbeatDelay)
+end
