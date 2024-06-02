@@ -6,7 +6,7 @@ getgenv().Settings = {
        
         Items = {
             SearchTerminal = {
-                ["Void Key"] = {Class = "Misc", Price = "-5%"},
+                ["Void Key"] = {Class = "Misc", Price = 70000},
                 --["Crystal Key"] = {Class = "Misc", Price = "1%"},
                 --["Secret Key"] = {Class = "Misc", Price = "1%"},
                 --["Mini Chest"] = {Class = "Misc", Price = "15%"},
