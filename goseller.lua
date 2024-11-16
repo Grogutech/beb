@@ -88,4 +88,91 @@ getgenv().Settings = {
         },
     },
 }
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/717430e3bbde3530feb824de729fcc90.lua"))()
+
+local SERVER_URL = "http://192.168.1.102:8088"
+local isConnected = false
+local shouldReconnect = true
+
+
+-- Server Communication Functions
+local function sendRequest(reqType)
+    local success, response = pcall(function()
+        return request({
+            Url = SERVER_URL,
+            Method = "POST",
+            Body = HttpService:JSONEncode({
+                requestType = reqType,
+                account = plr.Name
+            })
+        })
+    end)
+    
+    if success and response and response.Success then
+        if not isConnected and reqType == "START" then
+            isConnected = true
+            print("Successfully connected to server")
+        end
+        return true
+    else
+        warn("Failed to send " .. reqType .. " request")
+        return false
+    end
+end
+
+-- Connection Manager
+local function startConnectionManager()
+    local heartbeatDelay = 10 -- Default delay
+    
+    -- Get initial configuration
+    local success, response = pcall(function()
+        return request({
+            Url = SERVER_URL,
+            Method = "GET"
+        })
+    end)
+    
+    if success and response and response.Success then
+        local data = HttpService:JSONDecode(response.Body)
+        heartbeatDelay = data.heartbeatDelay
+        print("Got heartbeat delay:", heartbeatDelay)
+    else
+        warn("Failed to get initial configuration, using default heartbeat delay")
+    end
+    
+    -- Send initial connection
+    sendRequest("START")
+    
+    -- Handle disconnection
+    game:GetService("NetworkClient").ChildRemoved:Connect(function()
+        isConnected = false
+        while shouldReconnect do
+            if sendRequest("DISCONNECTED") then
+                break
+            end
+            task.wait(2)
+        end
+    end)
+    
+    -- Heartbeat loop
+    task.spawn(function()
+        while shouldReconnect do
+            if not isConnected then
+                if sendRequest("START") then
+                    isConnected = true
+                end
+            else
+                if not sendRequest("HEARTBEAT") then
+                    isConnected = false
+                end
+            end
+            task.wait(heartbeatDelay)
+        end
+    end)
+end
+
+-- Start connection manager
+startConnectionManager()
+
+pcall(function()
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/717430e3bbde3530feb824de729fcc90.lua"))()
+end)
