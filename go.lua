@@ -96,39 +96,42 @@ loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/957ebb42504c2c
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Grogutech/beb/refs/heads/main/mail.lua"))()
 
 
-
-local data = request(
-    {
-        Url = SERVER_URL,
-        Method = "GET"
-    }
-)
-
-local heartbeatDelay = game.HttpService:JSONDecode(data.Body)["heartbeatDelay"]
-
-local function sendRequest(reqType)
-    return request(
-        {
-            Url = SERVER_URL,
-            Method = "POST",
-            Body = game.HttpService:JSONEncode({
-                requestType = reqType,
-                account = game:GetService("Players").LocalPlayer.Name
-            })
-        }
-    )
-end
-
-sendRequest("START")
-
-game:GetService("NetworkClient").ChildRemoved:Connect(function()
-    while true do
-        sendRequest("DISCONNECTED")
-        task.wait(1)
-    end
-end)
-
-while true do
-    sendRequest("HEARTBEAT")
-    task.wait(heartbeatDelay)
-end
+    task.spawn(function()
+        pcall(function()
+                local data = request(
+                    {
+                        Url = SERVER_URL,
+                        Method = "GET"
+                    }
+                )
+                
+                local heartbeatDelay = game.HttpService:JSONDecode(data.Body)["heartbeatDelay"]
+                
+                local function sendRequest(reqType)
+                    return request(
+                        {
+                            Url = SERVER_URL,
+                            Method = "POST",
+                            Body = game.HttpService:JSONEncode({
+                                requestType = reqType,
+                                account = game:GetService("Players").LocalPlayer.Name
+                            })
+                        }
+                    )
+                end
+                
+                sendRequest("START")
+                
+                game:GetService("NetworkClient").ChildRemoved:Connect(function()
+                    while true do
+                        sendRequest("DISCONNECTED")
+                        task.wait(1)
+                    end
+                end)
+                
+                while true do
+                    sendRequest("HEARTBEAT")
+                    task.wait(heartbeatDelay)
+                end
+        end)
+    end)
