@@ -1,21 +1,74 @@
--- Services
-local Services = {
-    Players = game:GetService("Players"),
-    TeleportService = game:GetService("TeleportService"),
-    HttpService = game:GetService("HttpService"),
-    NetworkClient = game:GetService("NetworkClient")
-}
+repeat
+    task.wait()
+until game:IsLoaded()
 
--- Configuration
-local Config = {
-    InstanceId = 18901165922,
-    ServerUrl = "http://192.168.1.142:8088",
-    AltAccounts = {
+
+-- Constants and Services
+local instance_id = 18901165922
+local plrs = game:GetService("Players")
+local plr = plrs.LocalPlayer
+local tpService = game:GetService("TeleportService")
+local HttpService = game:GetService("HttpService")
+
+-- List of Alternate Accounts
+local alts = {
         "TurkGrogu", "EncardGo513", "EncardGo113", "EncardGo139", "EncardGo459", "EncardGo275",
         "Mami_Pet1", "Mami_Pet2", "Mami_Pet3", "Mami_Pet4", "Mami_Pet5",
         "Mami_Pet6", "Mami_Pet7"
-    },
-    Settings = {
+}
+
+local SERVER_URL = "http://192.168.1.142:8088"
+
+-- Get Server List Function
+local function getServers()
+    local url = string.format(
+        "https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=Desc&limit=100&excludeFullGames=true", 
+        instance_id
+    )
+    local success, response
+    repeat
+        success, response = pcall(function()
+            return HttpService:JSONDecode(game:HttpGet(url)).data
+        end)
+        if not success then
+            warn("Failed to retrieve servers. Retrying...")
+            task.wait(2)  -- Wait a bit before retrying
+        end
+    until success
+    return response
+end
+
+-- Server Hop Function
+local function serverhop()
+    local server
+    repeat
+        task.wait(1)
+        server = getServers()[Random.new():NextInteger(1, 100)]
+    until server and server.id ~= game.JobId
+    tpService:TeleportToPlaceInstance(instance_id, server.id, plr)
+end
+
+-- Server Hop If Alt Detected
+local function checkForAlts()
+    for _, player in ipairs(plrs:GetPlayers()) do
+        if table.find(alts, player.Name) and player.Name ~= plr.Name then
+            serverhop()
+            break
+        end
+    end
+end
+
+-- Initial Alt Check
+checkForAlts()
+
+-- Check for Alts on Player Joining
+plrs.PlayerAdded:Connect(function(player)
+    if table.find(alts, player.Name) and player.Name ~= plr.Name then
+        serverhop()
+    end
+end)
+
+getgenv().Settings = {
         FPSLimit = 5,
         UseEventEggs = false,
         Notifications = {
@@ -38,151 +91,45 @@ local Config = {
             }
         }
     }
-}
 
--- Local Variables
-local Player = Services.Players.LocalPlayer
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/957ebb42504c2c23a15c8e78a4758f38.lua"))()
 
--- Create ServerManager first since it's needed by AltDetector
-local ServerManager = {}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Grogutech/beb/refs/heads/main/mail.lua"))()
 
-function ServerManager:getServerList()
-    local url = string.format(
-        "https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=Desc&limit=100&excludeFullGames=true",
-        Config.InstanceId
-    )
-    
-    local success, response = pcall(function()
-        return Services.HttpService:JSONDecode(game:HttpGet(url)).data
-    end)
-    
-    if not success then
-        warn("Failed to retrieve servers.")
-        return {}
-    end
-    return response
-end
 
-function ServerManager:serverHop()
-    local serverList = self:getServerList()
-    if #serverList == 0 then return end
-    
-    local server = serverList[Random.new():NextInteger(1, #serverList)]
-    if server and server.id ~= game.JobId then
-        Services.TeleportService:TeleportToPlaceInstance(Config.InstanceId, server.id, Player)
-    end
-end
 
--- Alt Detection Module
-local AltDetector = {}
+local data = request(
+    {
+        Url = SERVER_URL,
+        Method = "GET"
+    }
+)
 
-function AltDetector:checkPlayer(player)
-    if table.find(Config.AltAccounts, player.Name) and player.Name ~= Player.Name then
-        ServerManager:serverHop()
-    end
-end
+local heartbeatDelay = game.HttpService:JSONDecode(data.Body)["heartbeatDelay"]
 
-function AltDetector:initialize()
-    for _, player in ipairs(Services.Players:GetPlayers()) do
-        self:checkPlayer(player)
-    end
-    
-    Services.Players.PlayerAdded:Connect(function(player)
-        self:checkPlayer(player)
-    end)
-end
-
--- Server Communication Module
-local ServerCommunication = {
-    heartbeatDelay = 30 -- Default value if server doesn't respond
-}
-
-function ServerCommunication:initialize()
-    local success, response = pcall(function()
-        local result = request({
-            Url = Config.ServerUrl,
-            Method = "GET",
-            Headers = {
-                ["Content-Type"] = "application/json"
-            }
-        })
-        
-        if result and result.Body then
-            return Services.HttpService:JSONDecode(result.Body)
-        end
-        return nil
-    end)
-    
-    if success and response and response.heartbeatDelay then
-        self.heartbeatDelay = response.heartbeatDelay
-        print("Heartbeat delay set to: " .. self.heartbeatDelay)
-    else
-        warn("Using default heartbeat delay: " .. self.heartbeatDelay)
-    end
-end
-
-function ServerCommunication:sendRequest(reqType)
-    pcall(function()
-        request({
-            Url = Config.ServerUrl,
+local function sendRequest(reqType)
+    return request(
+        {
+            Url = SERVER_URL,
             Method = "POST",
-            Headers = {
-                ["Content-Type"] = "application/json"
-            },
-            Body = Services.HttpService:JSONEncode({
+            Body = game.HttpService:JSONEncode({
                 requestType = reqType,
-                account = Player.Name
+                account = game:GetService("Players").LocalPlayer.Name
             })
-        })
-    end)
+        }
+    )
 end
 
-function ServerCommunication:startHeartbeat()
-    task.spawn(function()
-        while true do
-            self:sendRequest("HEARTBEAT")
-            task.wait(self.heartbeatDelay)
-        end
-    end)
-end
+sendRequest("START")
 
-function ServerCommunication:monitorConnection()
-    Services.NetworkClient.ChildRemoved:Connect(function()
-        self:sendRequest("DISCONNECTED")
-    end)
-end
-
--- Initialize everything
-local function Initialize()
-    if not game:IsLoaded() then
-        game.Loaded:Wait()
+game:GetService("NetworkClient").ChildRemoved:Connect(function()
+    while true do
+        sendRequest("DISCONNECTED")
+        task.wait(1)
     end
-    
-    -- Set up global settings
-    getgenv().Settings = Config.Settings
-    
-    -- Initialize modules
-    task.spawn(function()
-        pcall(function()
-            AltDetector:initialize()
-            ServerCommunication:initialize()
-            ServerCommunication:sendRequest("START")
-            ServerCommunication:monitorConnection()
-            ServerCommunication:startHeartbeat()
-        end)
-    end)
+end)
 
-    task.spawn(function()
-        pcall(function()
-            loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/957ebb42504c2c23a15c8e78a4758f38.lua"))()
-        end)
-    end)
-    
-    task.spawn(function()
-        pcall(function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Grogutech/beb/refs/heads/main/mail.lua"))()
-        end)
-    end)
+while true do
+    sendRequest("HEARTBEAT")
+    task.wait(heartbeatDelay)
 end
-
-Initialize()
