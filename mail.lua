@@ -45,7 +45,7 @@ local function shouldMailItem(item, itemConfig)
     local minimumRequired = itemConfig.minimum or Config.defaultMinimum
     local currentAmount = item._am or 1
     
-    if itemConfig.checkTier and item.tn ~= itemConfig.checkTier then
+    if itemConfig.checkTier and item.tn ~= tonumber(itemConfig.checkTier) then
         return false
     end
     
