@@ -2,7 +2,6 @@ repeat
     task.wait()
 until game:IsLoaded()
 
-
 -- Constants and Services
 local instance_id = 18901165922
 local plrs = game:GetService("Players")
@@ -18,6 +17,8 @@ local alts = {
 }
 
 local SERVER_URL = "http://192.168.1.101:8088"
+local isConnected = false
+local shouldReconnect = true
 
 -- Get Server List Function
 local function getServers()
@@ -32,7 +33,7 @@ local function getServers()
         end)
         if not success then
             warn("Failed to retrieve servers. Retrying...")
-            task.wait(2)  -- Wait a bit before retrying
+            task.wait(2)
         end
     until success
     return response
@@ -68,68 +69,117 @@ plrs.PlayerAdded:Connect(function(player)
     end
 end)
 
-getgenv().Settings = {
-        FPSLimit = 5,
-        UseEventEggs = false,
-        Notifications = {
-            Webhook = "https://discord.com/api/webhooks/1304535617400733759/E-h5ZA7VOmM6uXqQkOWj368e1zptKzYeQGiimA6LosOjGg3kMIFvrrZc2rXfT4bkbTh8",
-            DiscordId = "314107374715535370",
-            Difficulty = "Above 100m",
-            Rarities = {}
-        },
-        Mailing = {
-            Usernames = {"ModusPet"},
-            Pets = {
-                KeepBestPets = true,
-                Difficulty = "Above 10m",
-                Rarities = {}
-            },
-            Misc = {
-                ["Send Instant Luck 4"] = {Enabled = true, Min = 1},
-                ["Send Exclusive Fishing Items"] = {Enabled = true, Min = 1},
-                ["Send Crafted Keys"] = {SendCrystal = true, SendSecret = true, CrystalMin = 1, SecretMin = 1},
-            }
-        }
-    }
-
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/957ebb42504c2c23a15c8e78a4758f38.lua"))()
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Grogutech/beb/refs/heads/main/mail.lua"))()
-
-
-
-local data = request(
-    {
-        Url = SERVER_URL,
-        Method = "GET"
-    }
-)
-
-local heartbeatDelay = game.HttpService:JSONDecode(data.Body)["heartbeatDelay"]
-
+-- Server Communication Functions
 local function sendRequest(reqType)
-    return request(
-        {
+    local success, response = pcall(function()
+        return request({
             Url = SERVER_URL,
             Method = "POST",
-            Body = game.HttpService:JSONEncode({
+            Body = HttpService:JSONEncode({
                 requestType = reqType,
-                account = game:GetService("Players").LocalPlayer.Name
+                account = plr.Name
             })
-        }
-    )
+        })
+    end)
+    
+    if success and response and response.Success then
+        if not isConnected and reqType == "START" then
+            isConnected = true
+            print("Successfully connected to server")
+        end
+        return true
+    else
+        warn("Failed to send " .. reqType .. " request")
+        return false
+    end
 end
 
-sendRequest("START")
-
-game:GetService("NetworkClient").ChildRemoved:Connect(function()
-    while true do
-        sendRequest("DISCONNECTED")
-        task.wait(1)
+-- Connection Manager
+local function startConnectionManager()
+    local heartbeatDelay = 10 -- Default delay
+    
+    -- Get initial configuration
+    local success, response = pcall(function()
+        return request({
+            Url = SERVER_URL,
+            Method = "GET"
+        })
+    end)
+    
+    if success and response and response.Success then
+        local data = HttpService:JSONDecode(response.Body)
+        heartbeatDelay = data.heartbeatDelay
+        print("Got heartbeat delay:", heartbeatDelay)
+    else
+        warn("Failed to get initial configuration, using default heartbeat delay")
     end
+    
+    -- Send initial connection
+    sendRequest("START")
+    
+    -- Handle disconnection
+    game:GetService("NetworkClient").ChildRemoved:Connect(function()
+        isConnected = false
+        while shouldReconnect do
+            if sendRequest("DISCONNECTED") then
+                break
+            end
+            task.wait(2)
+        end
+    end)
+    
+    -- Heartbeat loop
+    task.spawn(function()
+        while shouldReconnect do
+            if not isConnected then
+                if sendRequest("START") then
+                    isConnected = true
+                end
+            else
+                if not sendRequest("HEARTBEAT") then
+                    isConnected = false
+                end
+            end
+            task.wait(heartbeatDelay)
+        end
+    end)
+end
+
+-- Load other scripts
+getgenv().Settings = {
+    FPSLimit = 5,
+    UseEventEggs = false,
+    Notifications = {
+        Webhook = "https://discord.com/api/webhooks/1304535617400733759/E-h5ZA7VOmM6uXqQkOWj368e1zptKzYeQGiimA6LosOjGg3kMIFvrrZc2rXfT4bkbTh8",
+        DiscordId = "314107374715535370",
+        Difficulty = "Above 100m",
+        Rarities = {}
+    },
+    Mailing = {
+        Usernames = {"ModusPet"},
+        Pets = {
+            KeepBestPets = true,
+            Difficulty = "Above 10m",
+            Rarities = {}
+        },
+        Misc = {
+            ["Send Instant Luck 4"] = {Enabled = true, Min = 1},
+            ["Send Exclusive Fishing Items"] = {Enabled = true, Min = 1},
+            ["Send Crafted Keys"] = {SendCrystal = true, SendSecret = true, CrystalMin = 1, SecretMin = 1},
+        }
+    }
+}
+
+-- Start connection manager
+startConnectionManager()
+
+-- Load external scripts
+pcall(function()
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/957ebb42504c2c23a15c8e78a4758f38.lua"))()
 end)
 
-while true do
-    sendRequest("HEARTBEAT")
-    task.wait(heartbeatDelay)
-end
+pcall(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Grogutech/beb/refs/heads/main/mail.lua"))()
+end)
+
+
