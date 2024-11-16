@@ -17,7 +17,7 @@ local alts = {
         "Mami_Pet6", "Mami_Pet7"
 }
 
-local SERVER_URL = "http://192.168.1.142:8088"
+local SERVER_URL = "http://192.168.1.101:8088"
 
 -- Get Server List Function
 local function getServers()
