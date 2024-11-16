@@ -11,6 +11,7 @@ local Config = {
 local ItemsToMail = {
     ["Crystal Key"] = { minimum = 1, class = "Misc" },
     ["Crystal Key Lower Half"] = { minimum = 5, class = "Misc" },
+    ["Crystal Key Upper Half"] = { minimum = 5, class = "Misc" },
     ["Secret Key"] = { minimum = 1, class = "Misc" },
     ["Instant Luck Potion"] = { minimum = 1, class = "Consumable", checkTier = 4 },
     ["Fishing Bait"] = { minimum = 1, class = "Consumable", checkTier = 5 },
