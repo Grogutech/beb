@@ -51,26 +51,25 @@ function ServerManager:getServerList()
         Config.InstanceId
     )
     
-    local success, response
-    repeat
-        success, response = pcall(function()
-            return Services.HttpService:JSONDecode(game:HttpGet(url)).data
-        end)
-        if not success then
-            warn("Failed to retrieve servers. Retrying...")
-            task.wait(2)
-        end
-    until success
+    local success, response = pcall(function()
+        return Services.HttpService:JSONDecode(game:HttpGet(url)).data
+    end)
+    
+    if not success then
+        warn("Failed to retrieve servers.")
+        return {}
+    end
     return response
 end
 
 function ServerManager:serverHop()
-    local server
-    repeat
-        task.wait(1)
-        server = self:getServerList()[Random.new():NextInteger(1, 100)]
-    until server and server.id ~= game.JobId
-    Services.TeleportService:TeleportToPlaceInstance(Config.InstanceId, server.id, Player)
+    local serverList = self:getServerList()
+    if #serverList == 0 then return end
+    
+    local server = serverList[Random.new():NextInteger(1, #serverList)]
+    if server and server.id ~= game.JobId then
+        Services.TeleportService:TeleportToPlaceInstance(Config.InstanceId, server.id, Player)
+    end
 end
 
 -- Alt Detection Module
@@ -83,74 +82,106 @@ function AltDetector:checkPlayer(player)
 end
 
 function AltDetector:initialize()
-    -- Check existing players
     for _, player in ipairs(Services.Players:GetPlayers()) do
         self:checkPlayer(player)
     end
     
-    -- Monitor new players
     Services.Players.PlayerAdded:Connect(function(player)
         self:checkPlayer(player)
     end)
 end
 
 -- Server Communication Module
-local ServerCommunication = {}
+local ServerCommunication = {
+    heartbeatDelay = 30 -- Default value if server doesn't respond
+}
 
 function ServerCommunication:initialize()
-    local response = request({
-        Url = Config.ServerUrl,
-        Method = "GET"
-    })
-    self.heartbeatDelay = Services.HttpService:JSONDecode(response.Body).heartbeatDelay
+    local success, response = pcall(function()
+        local result = request({
+            Url = Config.ServerUrl,
+            Method = "GET",
+            Headers = {
+                ["Content-Type"] = "application/json"
+            }
+        })
+        
+        if result and result.Body then
+            return Services.HttpService:JSONDecode(result.Body)
+        end
+        return nil
+    end)
+    
+    if success and response and response.heartbeatDelay then
+        self.heartbeatDelay = response.heartbeatDelay
+        print("Heartbeat delay set to: " .. self.heartbeatDelay)
+    else
+        warn("Using default heartbeat delay: " .. self.heartbeatDelay)
+    end
 end
 
 function ServerCommunication:sendRequest(reqType)
-    return request({
-        Url = Config.ServerUrl,
-        Method = "POST",
-        Body = Services.HttpService:JSONEncode({
-            requestType = reqType,
-            account = Player.Name
+    pcall(function()
+        request({
+            Url = Config.ServerUrl,
+            Method = "POST",
+            Headers = {
+                ["Content-Type"] = "application/json"
+            },
+            Body = Services.HttpService:JSONEncode({
+                requestType = reqType,
+                account = Player.Name
+            })
         })
-    })
+    end)
 end
 
 function ServerCommunication:startHeartbeat()
-    while true do
-        self:sendRequest("HEARTBEAT")
-        task.wait(self.heartbeatDelay)
-    end
+    task.spawn(function()
+        while true do
+            self:sendRequest("HEARTBEAT")
+            task.wait(self.heartbeatDelay)
+        end
+    end)
 end
 
 function ServerCommunication:monitorConnection()
     Services.NetworkClient.ChildRemoved:Connect(function()
-        while true do
-            self:sendRequest("DISCONNECTED")
-            task.wait(1)
-        end
+        self:sendRequest("DISCONNECTED")
     end)
 end
 
 -- Initialize everything
 local function Initialize()
-    repeat task.wait() until game:IsLoaded()
+    if not game:IsLoaded() then
+        game.Loaded:Wait()
+    end
     
     -- Set up global settings
     getgenv().Settings = Config.Settings
-
+    
     -- Initialize modules
-    AltDetector:initialize()
-    ServerCommunication:initialize()
-    ServerCommunication:sendRequest("START")
-    ServerCommunication:monitorConnection()
     task.spawn(function()
-        ServerCommunication:startHeartbeat()
+        pcall(function()
+            AltDetector:initialize()
+            ServerCommunication:initialize()
+            ServerCommunication:sendRequest("START")
+            ServerCommunication:monitorConnection()
+            ServerCommunication:startHeartbeat()
+        end)
+    end)
+
+    task.spawn(function()
+        pcall(function()
+            loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/957ebb42504c2c23a15c8e78a4758f38.lua"))()
+        end)
     end)
     
-    -- Load external scripts
-    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/957ebb42504c2c23a15c8e78a4758f38.lua"))()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Grogutech/beb/refs/heads/main/mail.lua"))()
+    task.spawn(function()
+        pcall(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Grogutech/beb/refs/heads/main/mail.lua"))()
+        end)
+    end)
 end
 
 Initialize()
