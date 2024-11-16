@@ -1,3 +1,11 @@
+-- Constants and Services
+local instance_id = 18901165922
+local plrs = game:GetService("Players")
+local plr = plrs.LocalPlayer
+local tpService = game:GetService("TeleportService")
+local HttpService = game:GetService("HttpService")
+
+
 local SERVER_URL = "http://192.168.1.102:8088"
 local isConnected = false
 local shouldReconnect = true
