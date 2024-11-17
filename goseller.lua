@@ -51,7 +51,7 @@ getgenv().Settings = {
             ["Jelly Dragon"] = {Class = "Pet", Price = "-5%"},
             ["Jelly Monkey"] = {Class = "Pet", Price = "-5%"},
             
-            ["RAP Above: 5k"] = {Class = "Pet", Price = "18%"},
+            ["RAP Above: 1k"] = {Class = "Pet", Price = "18%"},
             ["Crystal Key"] = {Class = "Misc", Price = "20%"},
             ["Secret Key"] = {Class = "Misc", Price = "20%"},
             ["Fishing Bait 5"] = {Class = "Consumable", Price = "20%"},
