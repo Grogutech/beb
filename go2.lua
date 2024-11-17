@@ -165,7 +165,7 @@ getgenv().Settings = {
         Misc = {
             ["Send Instant Luck 4"] = {Enabled = true, Min = 1},
             ["Send Exclusive Fishing Items"] = {Enabled = true, Min = 1},
-            ["Send Crafted Keys"] = {SendCrystal = true, SendSecret = true, CrystalMin = 1, SecretMin = 1},
+            ["Send Crafted Keys"] = {SendCrystal = false, SendSecret = false, CrystalMin = 50, SecretMin = 50},
         }
     }
 }
