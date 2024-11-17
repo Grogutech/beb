@@ -19,20 +19,20 @@ getgenv().Settings = {
     Notifications = {
         Webhook = "https://discord.com/api/webhooks/1304535617400733759/E-h5ZA7VOmM6uXqQkOWj368e1zptKzYeQGiimA6LosOjGg3kMIFvrrZc2rXfT4bkbTh8",
         DiscordId = "314107374715535370",
-        Difficulty = "Above 100m",
+        Difficulty = "Above 10m",
         Rarities = {}
     },
     Mailing = {
         Usernames = {"ModusPet"},
         Pets = {
             KeepBestPets = true,
-            Difficulty = "Above 5m",
+            Difficulty = "Above 10m",
             Rarities = {}
         },
         Misc = {
             ["Send Instant Luck 4"] = {Enabled = true, Min = 1},
             ["Send Exclusive Fishing Items"] = {Enabled = true, Min = 1},
-            ["Send Crafted Keys"] = {SendCrystal = false, SendSecret = false, CrystalMin = 50, SecretMin = 50},
+            ["Send Crafted Keys"] = {SendCrystal = true, SendSecret = true, CrystalMin = 1, SecretMin = 1},
         }
     }
 }
