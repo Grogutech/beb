@@ -2,8 +2,8 @@ getgenv().OldCFrame = nil
 getgenv().Enabled = true
 
 getgenv().Limits = {
-    ["Blue"] = 1,
-    ["Purple"] = 10
+    ["Blue"] = 10,
+    ["Purple"] = 1
 }
 
 local SaveModule = require(game.ReplicatedStorage.Library.Client.Save)
