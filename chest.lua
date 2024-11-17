@@ -18,6 +18,9 @@ local PlayerHumanoidRootPart =PlayerCharacter:FindFirstChild("HumanoidRootPart")
 local PositionBlueChest = CFrame.new(-23.4127789, 3.60205817, 171.047852, -0.859449804, -2.70322804e-08, 0.511220098, 1.88000246e-08, 1, 8.44840713e-08, -0.511220098, 8.22207724e-08, -0.859449804)
 local PositionSecretChest = CFrame.new(215.447311, -116.493744, -150.387924, 0.100747772, 2.0890738e-08, 0.994912028, 7.33217131e-09, 1, -2.17400515e-08, -0.994912028, 9.48512735e-09, 0.100747772)
 
+
+warn("OK")
+
 -- PlayerCharacter:SetPrimaryPartCFrame(PositionBlueChest)
 
 setclipboard(HttpService:JSONEncode(SaveModule.GetSaves()[Players.LocalPlayer].Inventory.Misc))
