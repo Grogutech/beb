@@ -9,9 +9,6 @@ local Config = {
 
 -- Flattened item definitions with class indicating category
 local ItemsToMail = {
-    ["Crystal Key"] = { minimum = 1, class = "Misc" },
-    ["Crystal Key Lower Half"] = { minimum = 5, class = "Misc" },
-    ["Crystal Key Upper Half"] = { minimum = 5, class = "Misc" },
     ["Secret Key"] = { minimum = 1, class = "Misc" },
     ["Golden Fishing Rod"] = { minimum = 1, class = "Misc" },
     ["Diamond Fishing Rod"] = { minimum = 1, class = "Misc" },
