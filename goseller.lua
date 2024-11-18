@@ -32,15 +32,15 @@ getgenv().Settings = {
         Active = true,
         Items = {
             ["All Huges"] = {Class = "Pet", Price = "75%"},
-            ["All Items"] = {Class = "Lootbox", Price = "15%"},
-            ["Instant Luck Potion 4"] = {Class = "Consumable", Price = "20%"},
+            --["All Items"] = {Class = "Lootbox", Price = "15%"},
+            --["Instant Luck Potion 4"] = {Class = "Consumable", Price = "20%"},
             --["All Items"] = {Class = "Consumable", Price = "35%"},
 
-            ["RAP Above: 1k"] = {Class = "Pet", Price = "18%"},
-            ["Crystal Key"] = {Class = "Misc", Price = "20%"},
-            ["Secret Key"] = {Class = "Misc", Price = "20%"},
+            ["All Items"] = {Class = "Pet", Price = "18%"},
+            --["Crystal Key"] = {Class = "Misc", Price = "20%"},
+            --["Secret Key"] = {Class = "Misc", Price = "20%"},
             ["Fishing Bait 5"] = {Class = "Consumable", Price = "30%"},
-            ["Golden Fishing Rod"] = {Class = "Misc", Price = "10%"},
+            --["Golden Fishing Rod"] = {Class = "Misc", Price = "10%"},
             
         },
         Serverhop = {
