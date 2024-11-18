@@ -43,7 +43,8 @@ getgenv().Settings = {
             --["RAP Above: 250"]= {Class = "Pet", Price = "18%"},
             --["Crystal Key"] = {Class = "Misc", Price = "20%"},
             --["Secret Key"] = {Class = "Misc", Price = "20%"},
-            ["Fishing Bait 5"] = {Class = "Consumable", Price = "30%"},
+            ["Fishing Bait 5"] = {Class = "Consumable", Price = 11000},
+            ["Treasure Chest 5"] = {Class = "Lootbox", Price = 11000},
             --["Golden Fishing Rod"] = {Class = "Misc", Price = "10%"},
             
         },
