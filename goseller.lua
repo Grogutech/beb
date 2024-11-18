@@ -53,7 +53,7 @@ getgenv().Settings = {
             ["Remove Username"] = true,
         },
         StopParams = {
-            ["Item Runout"] = true,
+            ["Item Runout"] = false,
             ["Diamonds Hit: 1b"] = false,
             ["60 Minutes"] = false,
             ["Switch To Sniping"] = false,
