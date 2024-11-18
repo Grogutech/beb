@@ -14,12 +14,10 @@ getgenv().Settings = {
             --// Example Settings, everything is editable.
             SearchTerminal = {
                 ["Crystal Key"] = {Class = "Misc", Price = 4000},
-                ["Crystal Key Lower Half"] = {Class = "Misc", Price = 4000},
-                ["Crystal Key Upper Half"] = {Class = "Misc", Price = 100},
+                ["Crystal Key Lower Half"] = {Class = "Misc", Price = "%40"},
+                ["Instant Luck Potion 4"] = {Class = "Consumable", Price = "%30"},
+                ["Secret Key"] = {Class = "Misc", Price = "25%"},
             },
-            ["Instant Luck Potion 4"] = {Class = "Consumable", Price = 9000},
-            ["Secret Key"] = {Class = "Misc", Price = "25%"},
-            ["Fishing Bait 5"] = {Class = "Consumable", Price = "15%"},
         },
         Serverhop = {
             ["Switch Servers"] = true,
