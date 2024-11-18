@@ -19,7 +19,7 @@ getgenv().Settings = {
             },
             ["Instant Luck Potion 4"] = {Class = "Consumable", Price = 9000},
             ["Secret Key"] = {Class = "Misc", Price = "25%"},
-            ["Fishing Bait 5"] = {Class = "Consumable", Price = "5%"},
+            ["Fishing Bait 5"] = {Class = "Consumable", Price = "15%"},
         },
         Serverhop = {
             ["Switch Servers"] = true,
