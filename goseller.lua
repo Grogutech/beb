@@ -60,7 +60,7 @@ getgenv().Settings = {
         },
         Other = {
             ["Auto Accept Mail"] = true,
-            ["Diamonds Hit: 10m Sendout"] = "anilkenim",
+            ["Diamonds Hit: 500k Sendout"] = "TurkGrogu1",
             ["Always Try Adding Listings"] = true,
             ["Never Join Friendslist"] = false,
         },
