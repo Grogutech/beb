@@ -34,7 +34,7 @@ getgenv().Settings = {
             ["Crystal Key Lower Half"] = {Class = "Misc", Price = "%25"},
             ["Instant Luck Potion 4"] = {Class = "Consumable", Price = "%25"},
             ["Secret Key"] = {Class = "Misc", Price = "20%"},
-            ["Crystal Key"] = {Class = "Misc", Price = "%25"},
+            ["Crystal Key"] = {Class = "Misc", Price = 7500},
             --["All Huges"] = {Class = "Pet", Price = "75%"},
             --["All Items"] = {Class = "Lootbox", Price = "15%"},
             --["Instant Luck Potion 4"] = {Class = "Consumable", Price = "20%"},
