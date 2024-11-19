@@ -14,7 +14,7 @@ getgenv().Settings = {
         Items = {
             --// Example Settings, everything is editable.
             SearchTerminal = {
-                ["Crystal Key Upper Half"] = {Class = "Misc", Price = 100},
+                ["Crystal Key Upper Half"] = {Class = "Misc", Price = 250},
             },
         },
         Serverhop = {
