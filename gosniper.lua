@@ -14,7 +14,7 @@ getgenv().Settings = {
         Items = {
             --// Example Settings, everything is editable.
             SearchTerminal = {
-                ["Instant Luck Potion 4"] = {Class = "Misc", Price = 16000},
+                ["Instant Luck Potion 4"] = {Class = "Consumable", Price = 15500},
             },
         },
         Serverhop = {
