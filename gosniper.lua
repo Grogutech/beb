@@ -28,7 +28,7 @@ getgenv().Settings = {
             ["URL"] = "https://discord.com/api/webhooks/1306028399231504446/JtKuRJhyypxzu48tPITDrhjmx_2xXX24MzWlHM0Pp-fy3QSPCqhCM6ngX4bY3XsVuPAW",
             ["Send Embeds"] = true,
             ["Remove Username"] = false,
-            ["Global Snipes"] = false,
+            ["Global Snipes"] = true,
         },
         StopParams = {
             ["Limits Reached"] = false,
