@@ -16,7 +16,7 @@ getgenv().Settings = {
         Items = {
             --// Example Settings, everything is editable.
             SearchTerminal = {
-                ["Instant Luck Potion 4"] = {Class = "Consumable", Price = 15500},
+                ["Instant Luck Potion 4"] = {Class = "Consumable", Price = 17000},
                 ["Crystal Key Upper Half"] = {Class = "Misc", Price = 250},
             },
         },
