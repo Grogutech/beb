@@ -1,3 +1,5 @@
+game:GetService("RunService"):Set3dRenderingEnabled(false)
+
 --local randomNumber = math.random(1, 100)
 
 --if randomNumber >= 95 then
