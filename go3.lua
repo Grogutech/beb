@@ -22,7 +22,7 @@ end)
 -- Load other scripts
 getgenv().Settings = {
     FPSLimit = 5,
-    UseEventEggs = false,
+    CraftInsta4PotionsSoICanSellThem = false,
     ["Notifications"] = {
         Webhook = "https://discord.com/api/webhooks/1304535617400733759/E-h5ZA7VOmM6uXqQkOWj368e1zptKzYeQGiimA6LosOjGg3kMIFvrrZc2rXfT4bkbTh8",
         DiscordId = "314107374715535370",
@@ -38,10 +38,11 @@ getgenv().Settings = {
         },
         ["Misc"] = {
             ["Send Instant Luck 4"] = {Active = true, Minimum = 1},
+            ["Send God Potions"] = {Active = true, Minimum = 1},
             ["Send Exclusive Fishing Items"] = {Active = true, Minimum = 1},
             ["Send Keys"] = {
-                ["Crystal"] = {Active = true, Minimum = 5, Parts = {UpperMinimum = 3, LowerMinimum = 5}},
-                ["Secret"] = {Active = true, Minimum = 2},
+                ["Crystal"] = {Active = true, Minimum = 20, Parts = {UpperMinimum = 20, LowerMinimum = 0}},
+                ["Secret"] = {Active = true, Minimum = 5},
             },
         }
     }
