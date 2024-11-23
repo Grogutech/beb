@@ -31,20 +31,19 @@ getgenv().Settings = {
     Seller = {
         Active = true,
         Items = {
-            ["Crystal Key Lower Half"] = {Class = "Misc", Price = "%25"},
+            --["Crystal Key Lower Half"] = {Class = "Misc", Price = "%25"},
             ["Instant Luck Potion 4"] = {Class = "Consumable", Price = "%25"},
-            ["Secret Key"] = {Class = "Misc", Price = "20%"},
+            ["Secret Key"] = {Class = "Misc", Price = "25%"},
             ["Crystal Key"] = {Class = "Misc", Price = 7500},
             --["All Huges"] = {Class = "Pet", Price = "75%"},
-            --["All Items"] = {Class = "Lootbox", Price = "15%"},
+            ["All Items"] = {Class = "Lootbox", Price = "25%"},
+            ["RAP Above: 1k"]= {Class = "Pet", Price = "18%"},
             --["Instant Luck Potion 4"] = {Class = "Consumable", Price = "20%"},
             --["All Items"] = {Class = "Consumable", Price = "35%"},
-
-            --["RAP Above: 250"]= {Class = "Pet", Price = "18%"},
             --["Crystal Key"] = {Class = "Misc", Price = "20%"},
             --["Secret Key"] = {Class = "Misc", Price = "20%"},
-            ["Fishing Bait 5"] = {Class = "Consumable", Price = 11000},
-            ["Treasure Chest 5"] = {Class = "Lootbox", Price = 11000},
+            --["Fishing Bait 5"] = {Class = "Consumable", Price = 11000},
+            --["Treasure Chest 5"] = {Class = "Lootbox", Price = 11000},
             --["Golden Fishing Rod"] = {Class = "Misc", Price = "10%"},
             
         },
