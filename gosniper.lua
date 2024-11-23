@@ -69,8 +69,6 @@ getgenv().Settings = {
     },
 }
 
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/717430e3bbde3530feb824de729fcc90.lua"))()
-
 
 local Save = require(game:GetService("ReplicatedStorage").Library.Client.Save).Get()
 local Inventory = Save.Inventory
