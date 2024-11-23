@@ -31,7 +31,7 @@ getgenv().Settings = {
     Seller = {
         Active = true,
         Items = {
-            ["RAP Above: 1k"]= {Class = "Pet", Price = "18%"},
+            ["RAP Above: 25k"]= {Class = "Pet", Price = "18%"},
             --["Crystal Key Lower Half"] = {Class = "Misc", Price = "%25"},
             ["Instant Luck Potion 4"] = {Class = "Consumable", Price = "%25"},
             ["Secret Key"] = {Class = "Misc", Price = "25%"},
@@ -52,7 +52,7 @@ getgenv().Settings = {
         },
         Serverhop = {
             ["Switch Servers"] = true,
-            ["Teleport Delay (m)"] = 10,
+            ["Teleport Delay (m)"] = 5,
         },
         Webhook = {
             ["URL"] = "https://discord.com/api/webhooks/1306028281417433168/cgRvOM0Pzj2rl1TrDxzGtbSf91lSU0NlR1XuDTarmh4vamcKSkP_s4iP23NfCrslgI3J",
