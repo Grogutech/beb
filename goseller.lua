@@ -31,17 +31,17 @@ getgenv().Settings = {
     Seller = {
         Active = true,
         Items = {
-            ["RAP Above: 40k"]= {Class = "Pet", Price = "-5%"},
+            ["RAP Above: 20k"]= {Class = "Pet", Price = "-5%"},
             --["Crystal Key Lower Half"] = {Class = "Misc", Price = "%25"},
             ["Jelly God Potion"] = {Class = "Consumable", Price = "-5%"},
             --["Secret Key"] = {Class = "Misc", Price = "25%"},
             ["Crystal Key"] = {Class = "Misc", Price = 7500},
             ["Crystal Key Upper Half"] = {Class = "Misc", Price = 3000},
             
-            --["All Huges"] = {Class = "Pet", Price = "75%"},
-            --["All Items"] = {Class = "Lootbox", Price = "25%"},
+            ["All Huges"] = {Class = "Pet", Price = "35%"},
+            ["All Items"] = {Class = "Lootbox", Price = "25%"},
             
-            --["Instant Luck Potion 4"] = {Class = "Consumable", Price = "20%"},
+            ["Instant Luck Potion 4"] = {Class = "Consumable", Price = "20%"},
             --["All Items"] = {Class = "Consumable", Price = "35%"},
             --["Crystal Key"] = {Class = "Misc", Price = "20%"},
             --["Secret Key"] = {Class = "Misc", Price = "20%"},
