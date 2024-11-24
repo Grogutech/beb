@@ -34,7 +34,7 @@ getgenv().Settings = {
             ["RAP Above: 500"]= {Class = "Pet", Price = "-5%"},
             --["Crystal Key"] = {Class = "Misc", Price = 6500},
             ["Crystal Key Upper Half"] = {Class = "Misc", Price = 3000},
-            ["All Items"] = {Class = "Lootbox", Price = "25%"},
+            --["All Items"] = {Class = "Lootbox", Price = "25%"},
         },
         Serverhop = {
             ["Switch Servers"] = true,
