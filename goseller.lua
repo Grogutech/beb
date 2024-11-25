@@ -31,6 +31,7 @@ getgenv().Settings = {
     Seller = {
         Active = true,
         Items = {
+            ["All Huges"] = {Class = "Pet", Price = "75%"},
             ["RAP Above: 500"] = {Class = "Pet", Price = "-5%"},
             ["Crystal Key"] = {Class = "Misc", Price = 6500},
             ["Secret Key"] = {Class = "Misc", Price = 360000},
