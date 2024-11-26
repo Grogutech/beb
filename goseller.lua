@@ -33,7 +33,7 @@ getgenv().Settings = {
         Items = {
             ["All Huges"] = {Class = "Pet", Price = "75%"},
             ["RAP Above: 100"] = {Class = "Pet", Price = "-5%"},
-            ["Crystal Key"] = {Class = "Misc", Price = 6500},
+            ["Crystal Key"] = {Class = "Misc", Price = 9500},
             ["Secret Key"] = {Class = "Misc", Price = 360000},
             --["Crystal Key Upper Half"] = {Class = "Misc", Price = 3000},
             --["All Items"] = {Class = "Lootbox", Price = "25%"},
