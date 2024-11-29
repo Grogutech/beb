@@ -30,7 +30,7 @@ getgenv().Settings = {
         Rarities = {}
     },
     ["Mailing"] = {
-        Usernames = {"ModusPet"},
+        Usernames = {"ModusPet", "TurkGrogu1"},
         ["Pets"] = {
             KeepBestPets = true,
             Difficulty = "Above 10m",
