@@ -35,6 +35,7 @@ getgenv().Settings = {
             ["RAP Above: 99"] = {Class = "Pet", Price = "-10%"},
             ["Crystal Key"] = {Class = "Misc", Price = 9500},
             ["Secret Key"] = {Class = "Misc", Price = 360000},
+            ["Instant Luck Potion 4"] = {Class = "Consumable", Price = 32999}
             --["Crystal Key Upper Half"] = {Class = "Misc", Price = 3000},
             --["All Items"] = {Class = "Lootbox", Price = "25%"},
         },
