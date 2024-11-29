@@ -32,7 +32,7 @@ getgenv().Settings = {
         Active = true,
         Items = {
             ["All Huges"] = {Class = "Pet", Price = "75%"},
-            ["RAP Above: 500"] = {Class = "Pet", Price = "-10%"},
+            ["RAP Above: 99"] = {Class = "Pet", Price = "-10%"},
             ["Crystal Key"] = {Class = "Misc", Price = 9500},
             ["Secret Key"] = {Class = "Misc", Price = 360000},
             --["Crystal Key Upper Half"] = {Class = "Misc", Price = 3000},
@@ -55,7 +55,7 @@ getgenv().Settings = {
         },
         Other = {
             ["Auto Accept Mail"] = true,
-            ["Diamonds Hit: 1b Sendout"] = "GalacticVana",
+            ["Diamonds Hit: 1m Sendout"] = "GalacticVana",
             ["Always Try Adding Listings"] = true,
             ["Never Join Friendslist"] = false,
         },
