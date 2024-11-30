@@ -32,7 +32,7 @@ getgenv().Settings = {
         Active = true,
         Items = {
             ["All Huges"] = {Class = "Pet", Price = "75%"},
-            ["RAP Above: 1k"] = {Class = "Pet", Price = "5%"},
+            ["RAP Above: 1k"] = {Class = "Pet", Price = "-5%"},
             ["Crystal Key"] = {Class = "Misc", Price = 10000},
             ["Secret Key"] = {Class = "Misc", Price = 360000},
             ["Instant Luck Potion 4"] = {Class = "Consumable", Price = 38999}
