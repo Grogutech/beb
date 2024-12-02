@@ -80,6 +80,8 @@ local Services = {
 
 local Player = Services.Players.LocalPlayer
 
+local GemsAmount = 0
+
 for id, table in pairs(Inventory.Currency) do
     if table.id == "Diamonds" then
         GemsAmount = table._am or 0
