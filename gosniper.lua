@@ -88,7 +88,7 @@ for id, table in pairs(Inventory.Currency) do
         break
     end
 end
-
+wait(1)
 if GemsAmount > 25000 then
   pcall(function()
     print("Running")
