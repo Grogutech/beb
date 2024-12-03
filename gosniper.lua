@@ -17,7 +17,7 @@ getgenv().Settings = {
             --// Example Settings, everything is editable.
             SearchTerminal = {
                 --["Instant Luck Potion 4"] = {Class = "Consumable", Price = 20000},
-                ["Crystal Key Upper Half"] = {Class = "Misc", Price = 1000, InventoryLimit = 2500},
+                ["Crystal Key Upper Half"] = {Class = "Misc", Price = 1000},
                 --["Crystal Key Lower Half"] = {Class = "Misc", Price = 1000},
             },
         },
@@ -91,6 +91,7 @@ end
 
 if GemsAmount > 25000 then
   pcall(function()
+    print("Running")
     loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/717430e3bbde3530feb824de729fcc90.lua"))()
   end)
 else
