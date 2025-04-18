@@ -17,7 +17,9 @@ getgenv().Settings = {
             ["Runic Mining Chest"] = {Amount = 1},
             ["Abyssal Treasure Chest"] = {Amount = 1},
             ["Instant Luck Potion 4"] = {Amount = 1},
-            ["Valentines Spinny Wheel Ticket"] = {Amount = 1} 
+            ["Jelly Bean Gift Bag"] = {Amount = 1},
+            ["Easter God Potion"] = {Amount = 1},
+            ["God Potion"] = {Amount = 1},
         },
     },
     ["Debug"] = {
