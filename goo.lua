@@ -2,7 +2,7 @@ getgenv().Settings = {
     ["Notifications"] = {
         Webhook = "https://discord.com/api/webhooks/1362892290607022281/5WMRCxKCjOZpwTkMV0W37KenhGLFlVQPqW1wKOFP-Bden4TSbX-8NVIUScmTu18LHaCM",
         DiscordID = "314107374715535370",
-        Difficulty = "Above 500k",
+        Difficulty = "Above 500m",
     },
     ["Mailing"] = {
         Usernames = {"ModusPet"},
