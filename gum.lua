@@ -1,7 +1,7 @@
 getgenv().Settings = {
     ["Egg Settings"] = {
         OpenEggs = true,
-        Egg = "Best",
+        Egg = "Infinity Egg",
         --// Supports ANY egg ("Rainbow Egg", "Infinity Egg", ...). Keep "Best" for new accounts.
         
         ["Notifications"] = {
@@ -18,6 +18,15 @@ getgenv().Settings = {
             
             Targets = {"Bunny Egg", "Pastel Egg", "Rainbow Egg", "Aura Egg", "Void Egg"},
             --// Targets = {} will automatically find the Top 3 BEST Rifts to hatch.
+        },
+    },
+    
+    ["Enchant Settings"] = {
+        EnchantPets = false,
+        
+        ["Require All Enchants"] = true,
+        ["Enchants Needed"] = {
+            ["Team Up"] = { Tier = 5, HigherTiers = true },
         },
     },
     
