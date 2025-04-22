@@ -25,4 +25,6 @@ getgenv().Settings = {
     ["Debug"] = {
     },
 }
+
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3cb1834cff48e9af0cc2616e44ab7d70.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Grogutech/beb/refs/heads/main/psgo-upgrade.lua"))()
