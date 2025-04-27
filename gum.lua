@@ -16,7 +16,7 @@ getgenv().Settings = {
             --// true --> Sort by Multiplier out of ALL Targetted Rifts.
             --// false --> Sort by Multiplier out of BEST Targetted Rifts.
             
-            Targets = {"Rainbow Egg", "Aura Egg", "Void Egg"},
+            Targets = {},
             --// Targets = {} will automatically find the Top 3 BEST Rifts to hatch.
         },
     },
