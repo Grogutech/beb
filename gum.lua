@@ -32,6 +32,17 @@ getgenv().Settings = {
     
     ["Debug"] = {
         DisableUI = true,
+        DisableUseMysteryBox = true,
+        DisableUseGoldenBox = true,
+        DisableUseSeason1Egg = false,
+        DisableAutoDelete = false,
+        DisableEquipPets = false,
+        DisablePurchaseMerchants = true,
+        DisableCraftPotions = false,
+        SellBubbles = true,
+        FarmCompetitiveQuests = true,
+        MinFarmTime = 4,
+        DisableUseInfinity = false,
     },
 }
 loadstring(game:HttpGet("https://system-exodus.com/scripts/BGSI/OneClick.lua"))()
