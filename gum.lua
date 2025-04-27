@@ -5,7 +5,7 @@ getgenv().Settings = {
         --// Supports ANY egg ("Rainbow Egg", "Infinity Egg", ...). Keep "Best" for new accounts.
         
         ["Notifications"] = {
-            Webhook = "https://discord.com/api/webhooks/1364047493683351704/-H11zNtdSHeZ_HbO__FZSEjeF7GeFvqy3hvK80P1EKDzwbJRQ8-fDLl3-kPwkK8TJbrz",
+            Webhook = "",
             DiscordID = "314107374715535370",
             Difficulty = "100k", --// Minimum Difficulty for Webhook Notifications
         },
