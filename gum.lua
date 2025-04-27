@@ -1,7 +1,7 @@
 getgenv().Settings = {
     ["Egg Settings"] = {
         OpenEggs = true,
-        Egg = "Bunny Egg",
+        Egg = "Best",
         --// Supports ANY egg ("Rainbow Egg", "Infinity Egg", ...). Keep "Best" for new accounts.
         
         ["Notifications"] = {
@@ -16,7 +16,7 @@ getgenv().Settings = {
             --// true --> Sort by Multiplier out of ALL Targetted Rifts.
             --// false --> Sort by Multiplier out of BEST Targetted Rifts.
             
-            Targets = {"Bunny Egg", "Pastel Egg", "Rainbow Egg", "Aura Egg", "Void Egg"},
+            Targets = {"Rainbow Egg", "Aura Egg", "Void Egg"},
             --// Targets = {} will automatically find the Top 3 BEST Rifts to hatch.
         },
     },
