@@ -31,7 +31,7 @@ getgenv().Settings = {
     },
     
     ["Debug"] = {
-        DisableUI = false,
+        DisableUI = true,
     },
 }
 loadstring(game:HttpGet("https://system-exodus.com/scripts/BGSI/OneClick.lua"))()
