@@ -20,7 +20,9 @@ getgenv().Settings = {
             --// Targets = {} will automatically find the Top 3 BEST Rifts to hatch.
         },
     },
-    
+    ["Trade Users"] = {
+            "GalacticVana"
+    },
     ["Enchant Settings"] = {
         EnchantPets = false,
         
