@@ -1,49 +1,15 @@
-getgenv().Settings = {
-    ["Egg Settings"] = {
-        OpenEggs = true,
-        Egg = "Best",
-        --// Supports ANY egg ("Rainbow Egg", "Infinity Egg", ...). Keep "Best" for new accounts.
-        
-        ["Notifications"] = {
-            Webhook = dc_webhook,
-            DiscordID = "314107374715535370",
-            Difficulty = "100k", --// Minimum Difficulty for Webhook Notifications
-        },
-
+getgenv().Config = {
+    ["Hatching"] = {
         ["Rifts"] = {
-            FindRifts = true,
-            SortByMultiplier = true, 
-            --// true --> Sort by Multiplier out of ALL Targetted Rifts.
-            --// false --> Sort by Multiplier out of BEST Targetted Rifts.
-            
-            Targets = {},
-            --// Targets = {} will automatically find the Top 3 BEST Rifts to hatch.
+            ["Eggs"] = {"Silly Egg", "Throwback Egg", "Nightmare Egg"}
         },
+        ["Egg"] = "100M Egg"
     },
-    
-    ["Enchant Settings"] = {
-        EnchantPets = false,
-        
-        ["Require All Enchants"] = true,
-        ["Enchants Needed"] = {
-            ["Team Up"] = { Tier = 5, HigherTiers = true },
-        },
+    ["Webhook"] = {
+        ["MinDifficulty"] = "100k",
+        ["UserID"] = "314107374715535370",
+        ["URL"] = dc_webhook,
     },
-    
-    ["Debug"] = {
-        DisableUI = false,
-        DisableUseMysteryBox = true,
-        DisableUseGoldenBox = true,
-        DisableUseSeason1Egg = false,
-        DisableAutoDelete = false,
-        DisableEquipPets = false,
-        DisablePurchaseMerchants = false,
-        DisableCraftPotions = false,
-        SellBubbles = true,
-        FarmCompetitiveQuests = true,
-        --MinAccountMastery = 20,
-        MinFarmTime = 4,
-        DisableUseInfinity = false,
-    },
+    ["AutoEnchant"] = true -- // Enchant Team Up on all Equipped Pets
 }
-loadstring(game:HttpGet("https://system-exodus.com/scripts/BGSI/OneClick.lua"))()
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/6a28683e5e681161a5074613f6daf64c.lua"))()
