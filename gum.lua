@@ -29,7 +29,7 @@ getgenv().Settings = {
         DisableCraftPotions = false,
         SellBubbles = true,
         FarmCompetitiveQuests = false,
-        --MinAccountMastery = 20,
+        MinAccountMastery = 15,
         MinFarmTime = 4,
         DisableUseInfinity = false,
     }
