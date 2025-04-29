@@ -11,8 +11,8 @@ getgenv().Settings = {
         },
 
         ["Rifts"] = {
-            FindRifts = true,
-            SortByMultiplier = true, 
+            FindRifts = false,
+            SortByMultiplier = false, 
             --// true --> Sort by Multiplier out of ALL Targetted Rifts.
             --// false --> Sort by Multiplier out of BEST Targetted Rifts.
             
