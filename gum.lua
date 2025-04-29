@@ -1,37 +1,23 @@
 getgenv().Settings = {
-    ["Egg Settings"] = {
-        OpenEggs = true,
-        Egg = "100M Egg",
-        --// Supports ANY egg ("Rainbow Egg", "Infinity Egg", ...). Keep "Best" for new accounts.
-        
-        ["Notifications"] = {
-            Webhook = dc_webhook,
-            DiscordID = "314107374715535370",
-            Difficulty = "100k", --// Minimum Difficulty for Webhook Notifications
-        },
+    ["Open Egg"] = "100M Egg",
 
-        ["Rifts"] = {
-            FindRifts = false,
-            SortByMultiplier = false, 
-            --// true --> Sort by Multiplier out of ALL Targetted Rifts.
-            --// false --> Sort by Multiplier out of BEST Targetted Rifts.
-            
-            Targets = {},
-            --// Targets = {} will automatically find the Top 3 BEST Rifts to hatch.
-        },
+    ["Target Rifts"] = {"Silly Egg", "Rainbow Egg", "Throwback Egg"},
+    ["Minimum Rift Luck"] = 25,
+    ["Target Highest Luck"] = false,
+    --// true --> Targets highest luck out of ALL selected rifts.
+    --// false --> Targets highest luck out of the BEST selected rift.
+
+    ["Webhook"] = dc_webhook,
+    ["Discord ID"] = "314107374715535370",
+    ["Minimum Send Difficulty"] = "100k",
+
+    ["Enchant Equipped"] = {
+        ["Team Up"] = {Tier = 1, HigherTiers = true}
     },
-    ["Trade Users"] = {
-            "GalacticVana"
-    },
-    ["Enchant Settings"] = {
-        EnchantPets = false,
-        
-        ["Require All Enchants"] = true,
-        ["Enchants Needed"] = {
-            ["Team Up"] = { Tier = 5, HigherTiers = true },
-        },
-    },
-    
+    ["Require All Enchants"] = true,
+
+    ["Trade Users"] = {"GalacticVana"},
+
     ["Debug"] = {
         DisableUI = false,
         DisableUseMysteryBox = false,
@@ -42,10 +28,10 @@ getgenv().Settings = {
         DisablePurchaseMerchants = false,
         DisableCraftPotions = false,
         SellBubbles = true,
-        FarmCompetitiveQuests = true,
+        FarmCompetitiveQuests = false,
         --MinAccountMastery = 20,
         MinFarmTime = 4,
         DisableUseInfinity = false,
-    },
+    }
 }
-loadstring(game:HttpGet("https://system-exodus.com/scripts/BGSI/OneClick.lua"))()
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/fb6f3bc2f2e7dd88042fac40addd4d57.lua"))()
