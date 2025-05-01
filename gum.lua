@@ -3,7 +3,7 @@ getgenv().Config = {
         ["Rifts"] = {
             ["Eggs"] = {"Silly Egg", "Throwback Egg", "Nightmare Egg"}
         },
-        ["Egg"] = "Infinity Egg"
+        ["Egg"] = "Nightmare Egg"
     },
     ["Webhook"] = {
         ["MinDifficulty"] = "100k",
