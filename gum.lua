@@ -1,4 +1,8 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Grogutech/beb/refs/heads/main/friend.lua"))()
+task.spawn(function()
+    pcall(function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Grogutech/beb/refs/heads/main/friend.lua"))()
+    end)
+end)
 
 getgenv().Config = {
     ["Hatching"] = {
