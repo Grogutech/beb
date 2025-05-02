@@ -1,7 +1,7 @@
 getgenv().Config = {
     ["Hatching"] = {
         ["Rifts"] = {
-            ["Eggs"] = {"Silly Egg", "Throwback Egg", "Nightmare Egg"}
+            ["Eggs"] = {"Silly Egg", "Nightmare Egg"}
         },
         ["Egg"] = "100M Egg"
     },
