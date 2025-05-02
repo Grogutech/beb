@@ -21,7 +21,7 @@ getgenv().bgsInfConfig = {
     RIFT_EGGS = {"Silly Egg", "Nightmare Egg"},
     HATCH_1X_EGG = "100M Egg", 
 
-    WEBHOOK_URL = dc_webhook‎,
+    WEBHOOK_URL = dc_webhook,
     DISCORD_ID = "314107374715535370",
     WEBHOOK_ODDS = 10000,
     SHOW_PET_WEBHOOK_USERNAME = true,
