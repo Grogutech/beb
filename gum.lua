@@ -6,7 +6,7 @@ getgenv().Config = {
         ["Egg"] = "Nightmare Egg"
     },
     ["Webhook"] = {
-        ["MinDifficulty"] = "100k",
+        ["MinDifficulty"] = "10k",
         ["UserID"] = "314107374715535370",
         ["URL"] = dc_webhook,
     },
