@@ -23,7 +23,7 @@ getgenv().bgsInfConfig = {
 
     WEBHOOK_URL = dc_webhook,
     DISCORD_ID = "314107374715535370",
-    WEBHOOK_ODDS = 10000,
+    WEBHOOK_ODDS = 50000,
     SHOW_PET_WEBHOOK_USERNAME = true,
 }
 
