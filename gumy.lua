@@ -1,4 +1,4 @@
-setfpscap(5)  -- number = fps
+setfpscap(15)  -- number = fps
 
 getgenv().bgsInfConfig = {
     ADD_FRIEND = true,
