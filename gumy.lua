@@ -18,8 +18,8 @@ getgenv().bgsInfConfig = {
     ENCHANT_TEAMUP = true,
     ENCHANT_TEAMUP_TIER = 1,
 
-    RIFT_EGGS = {"Silly Egg", "Nightmare Egg"},
-    HATCH_1X_EGG = "100M Egg", 
+    RIFT_EGGS = {"Silly Egg"},
+    HATCH_1X_EGG = "Infinity Egg", 
 
     WEBHOOK_URL = dc_webhook,
     DISCORD_ID = "314107374715535370",
