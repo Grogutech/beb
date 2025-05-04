@@ -25,6 +25,10 @@ getgenv().bgsInfConfig = {
     DISCORD_ID = "314107374715535370",
     WEBHOOK_ODDS = 50000,
     SHOW_PET_WEBHOOK_USERNAME = true,
+    POTIONS_TO_CRAFT = {"Mythic", "Speed", "Lucky"},
+    IGNORE_MYSTERY_BOX_GEM_CAP = true,
+    IGNORE_GIANT_VOID_CHEST = true,
+    MIN_COINS_BEFORE_HATCHING = 1000000000,
 }
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/e2d15fd8d5fd053a359cc3e296c68150.lua"))()
