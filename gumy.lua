@@ -19,7 +19,7 @@ getgenv().bgsInfConfig = {
     ENCHANT_TEAMUP = true,
     ENCHANT_TEAMUP_TIER = 5,
 
-    RIFT_EGGS = {"Silly Egg"},
+    RIFT_EGGS = {"Silly Egg", "Nightmare Egg"},
     HATCH_1X_EGG = "Infinity Egg", 
 
     WEBHOOK_URL = dc_webhook,
