@@ -13,7 +13,7 @@ getgenv().bgsInfConfig = {
     USE_MYSTERY_BOX = true,
 
     RARITY_TO_DELETE = {"Common", "Unique", "Rare", "Epic"},
-    LEGENDARY_TIER_TO_DELETE = 0,
+    LEGENDARY_TIER_TO_DELETE = 1,
 
     ENCHANT_TEAMUP = true,
     ENCHANT_TEAMUP_TIER = 1,
