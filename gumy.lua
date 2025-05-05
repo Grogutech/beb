@@ -8,6 +8,8 @@ getgenv().bgsInfConfig = {
     PURCHASE_STARSHOP_SLOT = 14,
     RESTOCK_SHOP = "Blackmarket",
     
+    IGNORE_MINIGAME = true,
+    
     USE_DICE_KEY = true,
     USE_ROYAL_KEY = true,
     USE_GOLDEN_KEY = true,
