@@ -31,6 +31,7 @@ getgenv().bgsInfConfig = {
     IGNORE_MYSTERY_BOX_GEM_CAP = true,
     IGNORE_GIANT_VOID_CHEST = true,
     MIN_COINS_BEFORE_HATCHING = 1000000000,
+    MIN_TICKETS_BEFORE_HATCHING = 5000000,
 }
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/e2d15fd8d5fd053a359cc3e296c68150.lua"))()
