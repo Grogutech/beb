@@ -14,7 +14,8 @@ getgenv().bgsInfConfig = {
 
     RARITY_TO_DELETE = {"Common", "Unique", "Rare", "Epic"},
     LEGENDARY_TIER_TO_DELETE = 1,
-
+    
+    USE_GEMS_ENCHANT = true,
     ENCHANT_TEAMUP = true,
     ENCHANT_TEAMUP_TIER = 1,
 
