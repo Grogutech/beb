@@ -2,12 +2,13 @@ setfpscap(15)  -- number = fps
 
 getgenv().bgsInfConfig = {
     ADD_FRIEND = true,
-    AUTO_UPDATE_RESTART = false,
+    AUTO_UPDATE_RESTART = true,
     PURCHASE_ALIENSHOP = true,
     PURCHASE_BLACKMARKET = true,
     PURCHASE_STARSHOP_SLOT = 14,
     RESTOCK_SHOP = "Blackmarket",
-
+    
+    USE_DICE_KEY = true,
     USE_ROYAL_KEY = true,
     USE_GOLDEN_KEY = true,
     USE_MYSTERY_BOX = true,
@@ -19,8 +20,8 @@ getgenv().bgsInfConfig = {
     ENCHANT_TEAMUP = true,
     ENCHANT_TEAMUP_TIER = 5,
 
-    RIFT_EGGS = {"Silly Egg", "Nightmare Egg"},
-    HATCH_1X_EGG = "Infinity Egg", 
+    RIFT_EGGS = {"Silly Egg", "Nightmare Egg", "Cyber Egg"},
+    HATCH_1X_EGG = "Cyber Egg", 
 
     WEBHOOK_URL = dc_webhook,
     DISCORD_ID = "314107374715535370",
