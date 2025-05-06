@@ -18,7 +18,7 @@ getgenv().bgsInfConfig = {
     
     USE_GEMS_ENCHANT = true,
     ENCHANT_TEAMUP = true,
-    ENCHANT_TEAMUP_TIER = 1,
+    ENCHANT_TEAMUP_TIER = 5,
 
     RIFT_EGGS = {"Silly Egg", "Nightmare Egg", "Cyber Egg"},
     HATCH_1X_EGG = "Infinity Egg", 
