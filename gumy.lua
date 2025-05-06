@@ -8,8 +8,6 @@ getgenv().bgsInfConfig = {
     PURCHASE_STARSHOP_SLOT = 14,
     RESTOCK_SHOP = "Blackmarket",
     
-    IGNORE_MINIGAME = true,
-    
     USE_DICE_KEY = true,
     USE_ROYAL_KEY = true,
     USE_GOLDEN_KEY = true,
@@ -33,7 +31,6 @@ getgenv().bgsInfConfig = {
     IGNORE_MYSTERY_BOX_GEM_CAP = true,
     IGNORE_GIANT_VOID_CHEST = true,
     MIN_COINS_BEFORE_HATCHING = 1000000000,
-    MIN_TICKETS_BEFORE_HATCHING = 5000000,
 }
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/e2d15fd8d5fd053a359cc3e296c68150.lua"))()
