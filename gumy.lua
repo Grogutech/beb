@@ -7,6 +7,8 @@ getgenv().bgsInfConfig = {
     PURCHASE_BLACKMARKET = true,
     PURCHASE_STARSHOP_SLOT = 14,
     RESTOCK_SHOP = "Blackmarket",
+
+    SKIP_MINIGAME = "Robot Claw", 
     
     USE_DICE_KEY = true,
     USE_ROYAL_KEY = true,
@@ -14,14 +16,14 @@ getgenv().bgsInfConfig = {
     USE_MYSTERY_BOX = true,
 
     RARITY_TO_DELETE = {"Common", "Unique", "Rare", "Epic"},
-    LEGENDARY_TIER_TO_DELETE = 1,
+    MAX_LEGENDARY_TIER_TO_DELETE = 1,
     
     USE_GEMS_ENCHANT = true,
     ENCHANT_TEAMUP = true,
     ENCHANT_TEAMUP_TIER = 5,
     INFINITY_EGG_TYPE = "World2",
     RIFT_EGGS = {"Silly Egg", "Nightmare Egg", "Game Egg", "Cyber Egg"},
-    HATCH_1X_EGG = "Game Egg", 
+    HATCH_1X_EGG = {"Game Egg", "Cyber Egg"}, 
 
     WEBHOOK_URL = dc_webhook,
     DISCORD_ID = "314107374715535370",
