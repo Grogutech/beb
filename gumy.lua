@@ -2,7 +2,7 @@ setfpscap(15)  -- number = fps
 
 getgenv().bgsInfConfig = {
     ADD_FRIEND = false,
-    AUTO_UPDATE_RESTART = true,
+    AUTO_UPDATE_RESTART = false,
     PURCHASE_ALIENSHOP = true,
     PURCHASE_BLACKMARKET = true,
     PURCHASE_STARSHOP_SLOT = 14,
