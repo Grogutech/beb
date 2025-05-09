@@ -1,7 +1,11 @@
 setfpscap(15)  -- number = fps
 
+
+task.wait(5) -- 5 saniye bekle
+
 local playerName = game.Players.LocalPlayer.Name
 local skipMinigameValue = playerName == "DarkShadow_5273" and "Robot Claw" or false
+
 
 getgenv().bgsInfConfig = {
     ADD_FRIEND = false,
