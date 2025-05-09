@@ -23,9 +23,9 @@ getgenv().bgsInfConfig = {
     USE_GEMS_ENCHANT = true,
     ENCHANT_TEAMUP = true,
     ENCHANT_TEAMUP_TIER = 5,
-    INFINITY_EGG_TYPE = "World1",
+    INFINITY_EGG_TYPE = "World2",
     RIFT_EGGS = {"Silly Egg", "Nightmare Egg", "Cyber Egg"},
-    HATCH_1X_EGG = {"Infinity Egg"}, 
+    HATCH_1X_EGG = {"Game Egg", "Infinity Egg"},
 
     WEBHOOK_URL = dc_webhook,
     DISCORD_ID = "314107374715535370",
