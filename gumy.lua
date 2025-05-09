@@ -1,5 +1,8 @@
 setfpscap(15)  -- number = fps
 
+local playerName = game.Players.LocalPlayer.Name
+local skipMinigameValue = playerName == "DarkShadow_5273" and "Robot Claw" or false
+
 getgenv().bgsInfConfig = {
     ADD_FRIEND = false,
     AUTO_UPDATE_RESTART = false,
@@ -9,7 +12,7 @@ getgenv().bgsInfConfig = {
     RESTOCK_SHOP = "Blackmarket",
     
     SERVERHOP_EGG = false,
-    SKIP_MINIGAME = false, 
+    SKIP_MINIGAME = skipMinigameValue,
     DO_BUBBLE_GUM = true, 
     
     USE_DICE_KEY = true,
