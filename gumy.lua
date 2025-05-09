@@ -1,35 +1,33 @@
-setfpscap(15)  -- number = fps
-
+setfpscap(15)
 task.wait(5)
 
 local Players = game:GetService("Players")
 local localPlayer = Players.LocalPlayer
-
 while not localPlayer do
     task.wait()
     localPlayer = Players.LocalPlayer
 end
 
 local playerName = localPlayer.Name
-local skipMinigameValue = playerName == "DarkShadow_5273" and "Robot Claw" or false
 
-
-getgenv().bgsInfConfig = {
+local defaultConfig = {
     ADD_FRIEND = false,
     AUTO_UPDATE_RESTART = false,
     PURCHASE_ALIENSHOP = true,
     PURCHASE_BLACKMARKET = true,
     PURCHASE_STARSHOP_SLOT = 14,
+    ENABLE_EXIT = true,
     RESTOCK_SHOP = "Blackmarket",
     
     SERVERHOP_EGG = false,
-    SKIP_MINIGAME = skipMinigameValue,
-    DO_BUBBLE_GUM = true, 
+    SKIP_MINIGAME = false,
+    DO_BUBBLE_GUM = true,
     
     USE_DICE_KEY = true,
     USE_ROYAL_KEY = true,
     USE_GOLDEN_KEY = true,
     USE_MYSTERY_BOX = true,
+    
 
     RARITY_TO_DELETE = {"Common", "Unique", "Rare", "Epic"},
     MAX_LEGENDARY_TIER_TO_DELETE = 1,
@@ -50,5 +48,33 @@ getgenv().bgsInfConfig = {
     IGNORE_GIANT_VOID_CHEST = true,
     MIN_COINS_BEFORE_HATCHING = 1000000000,
 }
+
+local customConfigs = {
+    ["DarkShadow_5273"] = {
+        SKIP_MINIGAME = "Robot Claw",
+    },  
+	["SenseiGrogu1"] = {
+        INFINITY_EGG_TYPE = "World1",
+        RIFT_EGGS = {"Silly Egg", "Nightmare Egg"},
+        HATCH_1X_EGG = {"Infinity Egg"}
+    },
+	["SenseiGrogu2"] = {
+        INFINITY_EGG_TYPE = "World1",
+        RIFT_EGGS = {"Silly Egg", "Nightmare Egg"},
+        HATCH_1X_EGG = {"Infinity Egg"}
+    },
+	["SenseiGrogu3"] = {
+        INFINITY_EGG_TYPE = "World1",
+        RIFT_EGGS = {"Silly Egg", "Nightmare Egg"},
+        HATCH_1X_EGG = {"Infinity Egg"}
+    },
+}
+
+local playerConfig = customConfigs[playerName] or {}
+for key, value in pairs(playerConfig) do
+    defaultConfig[key] = value
+end
+
+getgenv().bgsInfConfig = defaultConfig
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/e2d15fd8d5fd053a359cc3e296c68150.lua"))()
