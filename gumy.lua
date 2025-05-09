@@ -48,16 +48,19 @@ local customConfigs = {
         SKIP_MINIGAME = "Robot Claw"
     },
     ["SenseiGrogu1"] = {
+        IGNORE_MINIGAME = true,
         INFINITY_EGG_TYPE = "World1",
         RIFT_EGGS = {"Silly Egg", "Nightmare Egg"},
         HATCH_1X_EGG = {"Infinity Egg"}
     },
     ["SenseiGrogu2"] = {
+        IGNORE_MINIGAME = true,
         INFINITY_EGG_TYPE = "World1",
         RIFT_EGGS = {"Silly Egg", "Nightmare Egg"},
         HATCH_1X_EGG = {"Infinity Egg"}
     },
     ["SenseiGrogu3"] = {
+        IGNORE_MINIGAME = true,
         INFINITY_EGG_TYPE = "World1",
         RIFT_EGGS = {"Silly Egg", "Nightmare Egg"},
         HATCH_1X_EGG = {"Infinity Egg"}
