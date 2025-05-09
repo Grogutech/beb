@@ -1,9 +1,16 @@
 setfpscap(15)  -- number = fps
 
+task.wait(5)
 
-task.wait(5) -- 5 saniye bekle
+local Players = game:GetService("Players")
+local localPlayer = Players.LocalPlayer
 
-local playerName = game.Players.LocalPlayer.Name
+while not localPlayer do
+    task.wait()
+    localPlayer = Players.LocalPlayer
+end
+
+local playerName = localPlayer.Name
 local skipMinigameValue = playerName == "DarkShadow_5273" and "Robot Claw" or false
 
 
