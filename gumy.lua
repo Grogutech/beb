@@ -18,27 +18,21 @@ local defaultConfig = {
     PURCHASE_STARSHOP_SLOT = 14,
     ENABLE_EXIT = true,
     RESTOCK_SHOP = "Blackmarket",
-    
     SERVERHOP_EGG = false,
     SKIP_MINIGAME = false,
     DO_BUBBLE_GUM = true,
-    
     USE_DICE_KEY = true,
     USE_ROYAL_KEY = true,
     USE_GOLDEN_KEY = true,
     USE_MYSTERY_BOX = true,
-    
-
     RARITY_TO_DELETE = {"Common", "Unique", "Rare", "Epic"},
     MAX_LEGENDARY_TIER_TO_DELETE = 1,
-    
     USE_GEMS_ENCHANT = true,
     ENCHANT_TEAMUP = true,
     ENCHANT_TEAMUP_TIER = 5,
     INFINITY_EGG_TYPE = "World2",
     RIFT_EGGS = {"Silly Egg", "Nightmare Egg", "Cyber Egg"},
     HATCH_1X_EGG = {"Game Egg", "Infinity Egg"},
-
     WEBHOOK_URL = dc_webhook,
     DISCORD_ID = "314107374715535370",
     WEBHOOK_ODDS = 10000,
@@ -46,28 +40,28 @@ local defaultConfig = {
     POTIONS_TO_CRAFT = {"Mythic", "Speed", "Lucky"},
     IGNORE_MYSTERY_BOX_GEM_CAP = true,
     IGNORE_GIANT_VOID_CHEST = true,
-    MIN_COINS_BEFORE_HATCHING = 1000000000,
+    MIN_COINS_BEFORE_HATCHING = 1000000000
 }
 
 local customConfigs = {
     ["DarkShadow_5273"] = {
-        SKIP_MINIGAME = "Robot Claw",
-    },  
-	["SenseiGrogu1"] = {
+        SKIP_MINIGAME = "Robot Claw"
+    },
+    ["SenseiGrogu1"] = {
         INFINITY_EGG_TYPE = "World1",
         RIFT_EGGS = {"Silly Egg", "Nightmare Egg"},
         HATCH_1X_EGG = {"Infinity Egg"}
     },
-	["SenseiGrogu2"] = {
+    ["SenseiGrogu2"] = {
         INFINITY_EGG_TYPE = "World1",
         RIFT_EGGS = {"Silly Egg", "Nightmare Egg"},
         HATCH_1X_EGG = {"Infinity Egg"}
     },
-	["SenseiGrogu3"] = {
+    ["SenseiGrogu3"] = {
         INFINITY_EGG_TYPE = "World1",
         RIFT_EGGS = {"Silly Egg", "Nightmare Egg"},
         HATCH_1X_EGG = {"Infinity Egg"}
-    },
+    }
 }
 
 local playerConfig = customConfigs[playerName] or {}
