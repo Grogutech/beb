@@ -9,7 +9,7 @@ getgenv().bgsInfConfig = {
     RESTOCK_SHOP = "Blackmarket",
     SERVERHOP_EGG = true,
     SKIP_MINIGAME = "Robot Claw", 
-    
+    DO_BUBBLE_GUM = true, 
     USE_DICE_KEY = true,
     USE_ROYAL_KEY = true,
     USE_GOLDEN_KEY = true,
