@@ -8,7 +8,7 @@ getgenv().bgsInfConfig = {
     PURCHASE_STARSHOP_SLOT = 14,
     RESTOCK_SHOP = "Blackmarket",
     
-    SERVERHOP_EGG = true,
+    SERVERHOP_EGG = false,
     SKIP_MINIGAME = false, 
     DO_BUBBLE_GUM = true, 
     
@@ -23,9 +23,9 @@ getgenv().bgsInfConfig = {
     USE_GEMS_ENCHANT = true,
     ENCHANT_TEAMUP = true,
     ENCHANT_TEAMUP_TIER = 5,
-    INFINITY_EGG_TYPE = "World2",
+    INFINITY_EGG_TYPE = "World1",
     RIFT_EGGS = {"Silly Egg", "Nightmare Egg", "Game Egg", "Cyber Egg"},
-    HATCH_1X_EGG = {"Game Egg", "Cyber Egg"}, 
+    HATCH_1X_EGG = {"Game Egg", "Infinity Egg"}, 
 
     WEBHOOK_URL = dc_webhook,
     DISCORD_ID = "314107374715535370",
