@@ -45,9 +45,6 @@ local defaultConfig = {
 }
 
 local customConfigs = {
-    ["DarkShadow_5273"] = {
-        SKIP_MINIGAME = "Robot Claw"
-    },
     ["SenseiGrogu1"] = {
         IGNORE_MINIGAME = true,
         INFINITY_EGG_TYPE = "World1",
