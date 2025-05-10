@@ -18,7 +18,7 @@ local defaultConfig = {
     PURCHASE_STARSHOP_SLOT = 14,
     ENABLE_EXIT = true,
     RESTOCK_SHOP = "Blackmarket",
-    SERVERHOP_EGG = false,
+    SERVERHOP_EGG = true,
     SKIP_MINIGAME = false,
     DO_BUBBLE_GUM = true,
     USE_DICE_KEY = true,
@@ -31,11 +31,11 @@ local defaultConfig = {
     ENCHANT_TEAMUP = true,
     ENCHANT_TEAMUP_TIER = 2,
     ENCHANT_HIGH_ROLLER = true,
-    INFINITY_EGG_TYPE = "World1",
+    INFINITY_EGG_TYPE = "World2",
     --RIFT_EGGS = {"Silly Egg", "Nightmare Egg", "Cyber Egg"},
     --HATCH_1X_EGG = {"Game Egg", "Cyber Egg"},
     RIFT_EGGS = {"Silly Egg"},
-    HATCH_1X_EGG = {"Void Egg"},
+    HATCH_1X_EGG = {"Game Egg"},
     WEBHOOK_URL = dc_webhook,
     DISCORD_ID = "314107374715535370",
     WEBHOOK_ODDS = 10000,
@@ -52,24 +52,6 @@ local customConfigs = {
         INFINITY_EGG_TYPE = "World1",
         RIFT_EGGS = {"Silly Egg", "Nightmare Egg"},
         HATCH_1X_EGG = {"Void Egg"}
-    },
-    ["SenseiGrogu1"] = {
-        IGNORE_MINIGAME = true,
-        INFINITY_EGG_TYPE = "World1",
-        RIFT_EGGS = {"Silly Egg", "Nightmare Egg"},
-        HATCH_1X_EGG = {"Infinity Egg"}
-    },
-    ["SenseiGrogu2"] = {
-        IGNORE_MINIGAME = true,
-        INFINITY_EGG_TYPE = "World1",
-        RIFT_EGGS = {"Silly Egg", "Nightmare Egg"},
-        HATCH_1X_EGG = {"Infinity Egg"}
-    },
-    ["SenseiGrogu3"] = {
-        IGNORE_MINIGAME = true,
-        INFINITY_EGG_TYPE = "World1",
-        RIFT_EGGS = {"Silly Egg", "Nightmare Egg"},
-        HATCH_1X_EGG = {"Infinity Egg"}
     }
 }
 
