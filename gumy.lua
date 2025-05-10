@@ -34,8 +34,8 @@ local defaultConfig = {
     INFINITY_EGG_TYPE = "World1",
     --RIFT_EGGS = {"Silly Egg", "Nightmare Egg", "Cyber Egg"},
     --HATCH_1X_EGG = {"Game Egg", "Cyber Egg"},
-    RIFT_EGGS = {"Silly Egg", "Underworld Egg", "Rainbow Egg"},
-    HATCH_1X_EGG = {"Rainbow Egg"},
+    RIFT_EGGS = {"Silly Egg", "Underworld Egg"},
+    HATCH_1X_EGG = {"200M Egg"},
     WEBHOOK_URL = dc_webhook,
     DISCORD_ID = "314107374715535370",
     WEBHOOK_ODDS = 10000,
@@ -47,7 +47,7 @@ local defaultConfig = {
 }
 
 local customConfigs = {
-    ["DarkShadow_5273"] = {
+    ["TurkGrogu"] = {
         IGNORE_MINIGAME = true,
     }
 }
