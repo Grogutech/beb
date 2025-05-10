@@ -45,6 +45,12 @@ local defaultConfig = {
 }
 
 local customConfigs = {
+    ["DarkShadow_5273"] = {
+        IGNORE_MINIGAME = true,
+        INFINITY_EGG_TYPE = "World1",
+        RIFT_EGGS = {"Silly Egg", "Nightmare Egg"},
+        HATCH_1X_EGG = {"Void Egg"}
+    },
     ["SenseiGrogu1"] = {
         IGNORE_MINIGAME = true,
         INFINITY_EGG_TYPE = "World1",
