@@ -18,7 +18,7 @@ local defaultConfig = {
     PURCHASE_STARSHOP_SLOT = 14,
     ENABLE_EXIT = true,
     RESTOCK_SHOP = "Blackmarket",
-    SERVERHOP_EGG = true,
+    SERVERHOP_EGG = false,
     SKIP_MINIGAME = false,
     DO_BUBBLE_GUM = true,
     USE_DICE_KEY = true,
@@ -31,11 +31,11 @@ local defaultConfig = {
     ENCHANT_TEAMUP = true,
     ENCHANT_TEAMUP_TIER = 2,
     ENCHANT_HIGH_ROLLER = true,
-    INFINITY_EGG_TYPE = "World2",
+    INFINITY_EGG_TYPE = "World1",
     --RIFT_EGGS = {"Silly Egg", "Nightmare Egg", "Cyber Egg"},
     --HATCH_1X_EGG = {"Game Egg", "Cyber Egg"},
-    RIFT_EGGS = {"Silly Egg"},
-    HATCH_1X_EGG = {"Game Egg"},
+    RIFT_EGGS = {"Silly Egg", "Underworld Egg"},
+    HATCH_1X_EGG = {"200M Egg"},
     WEBHOOK_URL = dc_webhook,
     DISCORD_ID = "314107374715535370",
     WEBHOOK_ODDS = 10000,
@@ -49,9 +49,6 @@ local defaultConfig = {
 local customConfigs = {
     ["DarkShadow_5273"] = {
         IGNORE_MINIGAME = true,
-        INFINITY_EGG_TYPE = "World1",
-        RIFT_EGGS = {"Silly Egg", "Nightmare Egg"},
-        HATCH_1X_EGG = {"Void Egg"}
     }
 }
 
