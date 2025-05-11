@@ -43,12 +43,11 @@ local defaultConfig = {
     HATCH_1X_EGG = {"200M Egg"},
     WEBHOOK_URL = dc_webhook,
     DISCORD_ID = "314107374715535370",
-    WEBHOOK_ODDS = 10000,
+    WEBHOOK_ODDS = 5000,
     SHOW_PET_WEBHOOK_USERNAME = true,
     POTIONS_TO_CRAFT = {"Coins", "Mythic", "Lucky", "Speed"},
     IGNORE_MYSTERY_BOX_GEM_CAP = true,
-    IGNORE_GIANT_VOID_CHEST = true,
-    MIN_COINS_BEFORE_HATCHING = 1000000000
+    IGNORE_GIANT_VOID_CHEST = true
 }
 
 local customConfigs = {
