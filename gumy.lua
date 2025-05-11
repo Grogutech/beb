@@ -52,8 +52,9 @@ local defaultConfig = {
 }
 
 local customConfigs = {
-    ["TurkGrogu"] = {
-        IGNORE_MINIGAME = true,
+    ["GalacticVana"] = {
+        IGNORE_MINIGAME = false,
+        SKIP_MINIGAME = "Robot Claw"
     }
 }
 
