@@ -18,13 +18,18 @@ local defaultConfig = {
     PURCHASE_STARSHOP_SLOT = 14,
     ENABLE_EXIT = true,
     RESTOCK_SHOP = "Blackmarket",
+
+    IGNORE_EQUIP_BEST_PET = true,
+    
     SERVERHOP_EGG = false,
     SKIP_MINIGAME = false,
     DO_BUBBLE_GUM = true,
+    
     USE_DICE_KEY = true,
     USE_ROYAL_KEY = true,
     USE_GOLDEN_KEY = true,
     USE_MYSTERY_BOX = true,
+    
     RARITY_TO_DELETE = {"Common", "Unique", "Rare", "Epic", "Legendary"},
     MAX_LEGENDARY_TIER_TO_DELETE = 1,
     USE_GEMS_ENCHANT = true,
