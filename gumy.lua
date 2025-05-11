@@ -52,10 +52,6 @@ local defaultConfig = {
 }
 
 local customConfigs = {
-    ["GalacticVana"] = {
-        IGNORE_MINIGAME = false,
-        SKIP_MINIGAME = "Robot Claw"
-    }
 }
 
 local playerConfig = customConfigs[playerName] or {}
