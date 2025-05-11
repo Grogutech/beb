@@ -19,8 +19,6 @@ local defaultConfig = {
     ENABLE_EXIT = true,
     RESTOCK_SHOP = "Blackmarket",
 
-    IGNORE_EQUIP_BEST_PET = true,
-    
     SERVERHOP_EGG = false,
     SKIP_MINIGAME = false,
     DO_BUBBLE_GUM = true,
