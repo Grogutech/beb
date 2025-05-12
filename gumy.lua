@@ -13,6 +13,8 @@ local playerName = localPlayer.Name
 local defaultConfig = {
     ADD_FRIEND = false,
     AUTO_UPDATE_RESTART = false,
+    ALWAYS_INFINITY_ELIXIR = true,
+    
     PURCHASE_ALIENSHOP = true,
     PURCHASE_BLACKMARKET = true,
     PURCHASE_DICE_MERCHANT = true,
