@@ -29,7 +29,7 @@ local defaultConfig = {
     USE_MYSTERY_BOX = true,
     
     RARITY_TO_DELETE = {"Common", "Unique", "Rare", "Epic", "Legendary"},
-    MAX_LEGENDARY_TIER_TO_DELETE = 1,
+    MAX_LEGENDARY_TIER_TO_DELETE = 2,
     USE_GEMS_ENCHANT = true,
     ENCHANT_TEAMUP = true,
     ENCHANT_TEAMUP_TIER = 2,
