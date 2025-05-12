@@ -34,7 +34,7 @@ local defaultConfig = {
     USE_GEMS_ENCHANT = true,
     
     ENCHANT_TEAMUP = true,
-    ENCHANT_TEAMUP_TIER = 2,
+    ENCHANT_TEAMUP_TIER = 1,
     ENCHANT_HIGH_ROLLER = true,
     INFINITY_EGG_TYPE = "World1",
     --RIFT_EGGS = {"Silly Egg", "Nightmare Egg", "Cyber Egg"},
