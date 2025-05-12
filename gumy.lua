@@ -15,10 +15,11 @@ local defaultConfig = {
     AUTO_UPDATE_RESTART = false,
     PURCHASE_ALIENSHOP = true,
     PURCHASE_BLACKMARKET = true,
+    PURCHASE_DICE_MERCHANT = true,
     PURCHASE_STARSHOP_SLOT = 14,
     ENABLE_EXIT = true,
     RESTOCK_SHOP = "Blackmarket",
-
+    
     SERVERHOP_EGG = false,
     SKIP_MINIGAME = false,
     DO_BUBBLE_GUM = true,
@@ -31,6 +32,7 @@ local defaultConfig = {
     RARITY_TO_DELETE = {"Common", "Unique", "Rare", "Epic", "Legendary"},
     MAX_LEGENDARY_TIER_TO_DELETE = 2,
     USE_GEMS_ENCHANT = true,
+    
     ENCHANT_TEAMUP = true,
     ENCHANT_TEAMUP_TIER = 2,
     ENCHANT_HIGH_ROLLER = true,
