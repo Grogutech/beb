@@ -60,7 +60,9 @@ local customConfigs = {
     ["GalacticVana"] = {
         INFINITY_EGG_TYPE = "World1",
         RIFT_EGGS = {"Silly Egg", "Void Egg", "Hell Egg", "Nightmare Egg"},
-        HATCH_1X_EGG = {"Infinity Egg"}
+        HATCH_1X_EGG = {"Infinity Egg"},
+        AUTO_BOUNTY_RIFT = false,
+        RARITY_TO_SHINY = {"Common", "Unique", "Rare", "Epic"},
     },
 }
 
