@@ -57,6 +57,11 @@ local defaultConfig = {
 }
 
 local customConfigs = {
+    ["GalacticVana"] = {
+        INFINITY_EGG_TYPE = "World1",
+        RIFT_EGGS = {"Silly Egg", "Void Egg", "Hell Egg", "Nightmare Egg"},
+        HATCH_1X_EGG = {"Infinity Egg"}
+    },
 }
 
 local playerConfig = customConfigs[playerName] or {}
