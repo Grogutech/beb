@@ -34,7 +34,7 @@ local defaultConfig = {
 
 
     RARITY_TO_SHINY = {"Common", "Unique", "Rare", "Epic", "Legendary"},
-    PETS_TO_DELETE = {"Cyborg Phoenix","Crimson Butterfly"},  -- Add Pets Name To Autodelete (Delete when max inventory)
+    PETS_TO_DELETE = {"Cyborg Phoenix", "Crimson Butterfly", "Dark Phoenix"},  -- Add Pets Name To Autodelete (Delete when max inventory)
     RARITY_TO_DELETE = {"Common", "Unique", "Rare", "Epic", "Legendary"},
     MAX_LEGENDARY_TIER_TO_DELETE = 2,
     USE_GEMS_ENCHANT = true,
