@@ -35,6 +35,7 @@ local defaultConfig = {
 
     RARITY_TO_SHINY = {"Common", "Unique", "Rare", "Epic", "Legendary"},
     RARITY_TO_DELETE = {"Common", "Unique", "Rare", "Epic", "Legendary"},
+    DELETE_LEGENDARY_SHINY = true,
     
     MAX_LEGENDARY_TIER_TO_DELETE = 2,
     USE_GEMS_ENCHANT = true,
