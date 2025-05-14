@@ -34,8 +34,8 @@ local defaultConfig = {
 
 
     RARITY_TO_SHINY = {"Common", "Unique", "Rare", "Epic", "Legendary"},
-    PETS_TO_DELETE = {"Cyborg Phoenix", "Crimson Butterfly", "Dark Phoenix"},  -- Add Pets Name To Autodelete (Delete when max inventory)
     RARITY_TO_DELETE = {"Common", "Unique", "Rare", "Epic", "Legendary"},
+    
     MAX_LEGENDARY_TIER_TO_DELETE = 2,
     USE_GEMS_ENCHANT = true,
     
@@ -43,13 +43,12 @@ local defaultConfig = {
     ENCHANT_TEAMUP_TIER = 1,
     ENCHANT_HIGH_ROLLER = true,
     INFINITY_EGG_TYPE = "World1",
-    --RIFT_EGGS = {"Silly Egg", "Nightmare Egg", "Cyber Egg"},
-    --HATCH_1X_EGG = {"Game Egg", "Cyber Egg"},
+
     RIFT_EGGS = {"Silly Egg", "Underworld Egg", "Cyber Egg"},
     HATCH_1X_EGG = {"Cyber Egg"},
     WEBHOOK_URL = dc_webhook,
     DISCORD_ID = "314107374715535370",
-    WEBHOOK_ODDS = 5000,
+    WEBHOOK_ODDS = 500,
     SHOW_PET_WEBHOOK_USERNAME = true,
     POTIONS_TO_CRAFT = {"Coins", "Mythic", "Lucky", "Speed"},
     IGNORE_MYSTERY_BOX_GEM_CAP = true,
