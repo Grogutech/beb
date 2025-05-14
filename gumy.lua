@@ -11,49 +11,62 @@ end
 local playerName = localPlayer.Name
 
 local defaultConfig = {
-    ADD_FRIEND = false,
-    AUTO_UPDATE_RESTART = false,
-    AUTO_BOUNTY_RIFT = true,
-    ALWAYS_INFINITY_ELIXIR = true,
-    
-    PURCHASE_ALIENSHOP = true,
-    PURCHASE_BLACKMARKET = true,
-    PURCHASE_DICE_MERCHANT = true,
-    PURCHASE_STARSHOP_SLOT = 14,
-    ENABLE_EXIT = false,
-    RESTOCK_SHOP = "Blackmarket",
-
-    IGNORE_MINIGAME = false,
-    
-    SERVERHOP_EGG = false,
-    
-    USE_DICE_KEY = true,
-    USE_ROYAL_KEY = true,
+    AUTO_UPDATE_RESTART = true,  -- Auto restart after important updates #update channel
+    ADD_FRIEND = false, -- Send friend request to everyone in server
+    ENABLE_EXIT = false, -- Pressing "X" will exit game, less performance
+    DO_BUBBLE_GUM = false,  -- Auto blow/sell/upgrade bubble gum & storage [Stops selling when max coins]
+    USE_ROYAL_KEY = false,
     USE_GOLDEN_KEY = false,
-    USE_MYSTERY_BOX = true,
-
-
-    RARITY_TO_SHINY = {"Common", "Unique", "Rare", "Epic", "Legendary"},
-    RARITY_TO_DELETE = {"Common", "Unique", "Rare", "Epic", "Legendary"},
-    DELETE_LEGENDARY_SHINY = true,
+    USE_MYSTERY_BOX = false,
+    IGNORE_MYSTERY_BOX_GEM_CAP = false,  -- true = Use Mystery Box Even When Gems Capped
+    HATCH_INFERNO_CUBE_AMOUNT = 6,  -- Legendary Team (For Fresh Accounts)
+    PURCHASE_STARSHOP_SLOT = 14,  -- Purchase starshop if u have enough points
+    IGNORE_GIANT_VOID_CHEST = true,
+    SERVERHOP_EGG = false, -- Serverhop until HATCH_1X_EGG egg found
+    INFINITY_EGG_TYPE = "World1", -- "World1" -> Overworld | "World2" -> Minigame Paradise
+    ALWAYS_INFINITY_ELIXIR = true,  -- Always keep infinity elixir active
+    IGNORE_EQUIP_BEST_PET = false,
+    AUTO_BOUNTY_RIFT = true, -- Auto add current bounty rift to RIFT_EGGS [Updates Daily]
     
-    MAX_LEGENDARY_TIER_TO_DELETE = 2,
-    USE_GEMS_ENCHANT = true,
-    
-    ENCHANT_TEAMUP = true,
-    ENCHANT_TEAMUP_TIER = 1,
-    ENCHANT_HIGH_ROLLER = true,
-    INFINITY_EGG_TYPE = "World1",
-
-    RIFT_EGGS = {"Silly Egg", "Underworld Egg", "Cyber Egg"},
-    HATCH_1X_EGG = {"Cyber Egg"},
+    SHOW_PET_WEBHOOK_USERNAME = true,  -- shows username in private webhook only
+    WEBHOOK_ODDS = 5000,  -- minimum odds to send webhook
     WEBHOOK_URL = dc_webhook,
-    DISCORD_ID = "314107374715535370",
-    WEBHOOK_ODDS = 3500,
-    SHOW_PET_WEBHOOK_USERNAME = true,
-    POTIONS_TO_CRAFT = {"Coins", "Mythic", "Lucky", "Speed"},
-    IGNORE_MYSTERY_BOX_GEM_CAP = true,
-    IGNORE_GIANT_VOID_CHEST = true
+    
+    USE_DICE_KEY = false,
+    IGNORE_MINIGAME = true,  -- Ignore all "world 2" mini games
+    SKIP_MINIGAME = "",  -- Use Super Ticket -> "Pet Match" | "Cart Escape" | "Robot Claw"
+
+    -- RARITY_TO_SHINY -> Shiny first, delete second (Shiny when max inventory)
+    RARITY_TO_SHINY = {"Common", "Unique", "Rare", "Epic", "Legendary"},
+    PETS_TO_DELETE = {""},  -- Add Pets Name To Autodelete (Delete when max inventory)
+    -- RARITY_TO_DELETE -> Common, Unique, Rare, Epic, Legendary (Delete when max inventory)
+    RARITY_TO_DELETE = {"Common", "Unique", "Rare", "Epic", "Legendary"},  
+    DELETE_LEGENDARY_SHINY = false,  -- Include "Legendary" in RARITY_TO_DELETE
+    DELETE_LEGENDARY_MYTHIC = false,  -- Include "Legendary" in RARITY_TO_DELETE
+    MAX_LEGENDARY_TIER_TO_DELETE = 2,  -- Maximum legendary tier to delete, if "3" it will delete Tier 1 to 3
+
+    USE_GEMS_ENCHANT = true, -- Use gems to enchant tier 2/3 & secret (If no more reroll orbs left)
+    ENCHANT_TEAMUP = true,  -- Works after legendary+ team
+    ENCHANT_TEAMUP_TIER = 5,  -- Works after legendary+ team
+    ENCHANT_HIGH_ROLLER = true,
+
+
+    MASTERY_PETS_LEVEL = 15,   -- Pets Mastery Level To Reach Before Hatching Secret Etc
+    MASTERY_BUFFS_LEVEL = 15,  -- Buffs Mastery Level To Reach Before Hatching Secret Etc
+    MASTERY_SHOPS_LEVEL = 10,  -- Shops Mastery Level To Reach Before Hatching Secret Etc
+    IGNORE_STARTER_HATCH = false,  -- Ignore Starter Hatch (For P2W/Progressed Accounts)
+    PURCHASE_BLACKMARKET = false,  -- Purchase All Blackmarket Items
+    PURCHASE_ALIENSHOP = true,  -- Purchase All Alien Shop Items
+    PURCHASE_DICE_MERCHANT = false,  -- Purchase All Dice Merchant Items
+
+    RESTOCK_SHOP = "Blackmarket", -- ("Blackmarket", "Alien Shop", "Dice Merchant") -> Reroll specified shop after buying all 3 slots 
+    POTIONS_TO_CRAFT = {"Coins", "Mythic", "Lucky", "Speed"},  -- "Coins", "Mythic", "Lucky", "Speed" (Craft ALL Tiers)
+    RIFT_EGGS = {"Silly Egg", "Underworld Egg", "Cyber Egg"},  -- Add Any Egg Name
+    HATCH_1X_EGG = {"Cyber Egg"},  -- Hatch 1x Egg If No Rift & FARM_MIN_GEMS Completed
+
+    FARM_MIN_GEMS = 1000000,  -- Farms Minimum Gems Before Hatching 1x Egg
+    MIN_COINS_BEFORE_HATCHING = 3000000000,  -- Doesn't affect fresh account grind
+    MIN_TICKETS_BEFORE_HATCHING = 1000000000,
 }
 
 local customConfigs = {
