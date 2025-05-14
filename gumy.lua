@@ -20,16 +20,17 @@ local defaultConfig = {
     PURCHASE_BLACKMARKET = true,
     PURCHASE_DICE_MERCHANT = true,
     PURCHASE_STARSHOP_SLOT = 14,
-    ENABLE_EXIT = true,
+    ENABLE_EXIT = false,
     RESTOCK_SHOP = "Blackmarket",
+
+    SKIP_MINIGAME = "Robot Claw",
+    IGNORE_MINIGAME = false,
     
     SERVERHOP_EGG = false,
-    SKIP_MINIGAME = false,
-    DO_BUBBLE_GUM = true,
     
     USE_DICE_KEY = true,
     USE_ROYAL_KEY = true,
-    USE_GOLDEN_KEY = true,
+    USE_GOLDEN_KEY = false,
     USE_MYSTERY_BOX = true,
 
 
