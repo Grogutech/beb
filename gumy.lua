@@ -61,7 +61,7 @@ local customConfigs = {
         INFINITY_EGG_TYPE = "World1",
         SKIP_MINIGAME = "Robot Claw",
         RIFT_EGGS = {"Silly Egg", "Rainbow Egg"},
-        HATCH_1X_EGG = {"Infinity Egg"},
+        HATCH_1X_EGG = {"200M Egg"},
         AUTO_BOUNTY_RIFT = false,
         RARITY_TO_SHINY = {"Common", "Unique", "Rare", "Epic"},
     },
