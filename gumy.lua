@@ -1,4 +1,4 @@
-setfpscap(15)
+setfpscap(5)
 wait(15)
 
 local Players = game:GetService("Players")
