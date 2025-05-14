@@ -23,7 +23,6 @@ local defaultConfig = {
     ENABLE_EXIT = false,
     RESTOCK_SHOP = "Blackmarket",
 
-    SKIP_MINIGAME = "Robot Claw",
     IGNORE_MINIGAME = false,
     
     SERVERHOP_EGG = false,
@@ -60,6 +59,7 @@ local defaultConfig = {
 local customConfigs = {
     ["GalacticVana"] = {
         INFINITY_EGG_TYPE = "World1",
+        SKIP_MINIGAME = "Robot Claw",
         RIFT_EGGS = {"Silly Egg", "Void Egg", "Hell Egg", "Nightmare Egg"},
         HATCH_1X_EGG = {"Infinity Egg"},
         AUTO_BOUNTY_RIFT = false,
