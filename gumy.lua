@@ -70,22 +70,6 @@ local defaultConfig = {
 }
 
 local customConfigs = {
-    ["GalacticVana"] = {
-        INFINITY_EGG_TYPE = "World1",
-        SKIP_MINIGAME = "Robot Claw",
-        RIFT_EGGS = {},
-        HATCH_1X_EGG = {"200M Egg"},
-        AUTO_BOUNTY_RIFT = false,
-        RARITY_TO_SHINY = {"Common", "Unique", "Rare", "Epic"},
-    },
-    ["DarkShadow_5273"] = {
-        INFINITY_EGG_TYPE = "World1",
-        SKIP_MINIGAME = "Robot Claw",
-        RIFT_EGGS = {"Silly Egg", "Void Egg"},
-        HATCH_1X_EGG = {"200M Egg"},
-        AUTO_BOUNTY_RIFT = false,
-        RARITY_TO_SHINY = {"Common", "Unique", "Rare", "Epic"},
-    },
 }
 
 local playerConfig = customConfigs[playerName] or {}
