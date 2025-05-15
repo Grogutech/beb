@@ -41,7 +41,7 @@ local defaultConfig = {
     PETS_TO_DELETE = {""},  -- Add Pets Name To Autodelete (Delete when max inventory)
     -- RARITY_TO_DELETE -> Common, Unique, Rare, Epic, Legendary (Delete when max inventory)
     RARITY_TO_DELETE = {"Common", "Unique", "Rare", "Epic", "Legendary"},  
-    DELETE_LEGENDARY_SHINY = false,  -- Include "Legendary" in RARITY_TO_DELETE
+    DELETE_LEGENDARY_SHINY = true,  -- Include "Legendary" in RARITY_TO_DELETE
     DELETE_LEGENDARY_MYTHIC = false,  -- Include "Legendary" in RARITY_TO_DELETE
     MAX_LEGENDARY_TIER_TO_DELETE = 2,  -- Maximum legendary tier to delete, if "3" it will delete Tier 1 to 3
 
