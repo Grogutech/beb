@@ -54,6 +54,7 @@ local defaultConfig = {
     MASTERY_PETS_LEVEL = 15,   -- Pets Mastery Level To Reach Before Hatching Secret Etc
     MASTERY_BUFFS_LEVEL = 15,  -- Buffs Mastery Level To Reach Before Hatching Secret Etc
     MASTERY_SHOPS_LEVEL = 10,  -- Shops Mastery Level To Reach Before Hatching Secret Etc
+    MASTERY_MINIGAME_LEVEL = 1,
     IGNORE_STARTER_HATCH = false,  -- Ignore Starter Hatch (For P2W/Progressed Accounts)
     PURCHASE_BLACKMARKET = false,  -- Purchase All Blackmarket Items
     PURCHASE_ALIENSHOP = true,  -- Purchase All Alien Shop Items
