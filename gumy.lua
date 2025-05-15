@@ -61,8 +61,8 @@ local defaultConfig = {
 
     RESTOCK_SHOP = "Blackmarket", -- ("Blackmarket", "Alien Shop", "Dice Merchant") -> Reroll specified shop after buying all 3 slots 
     POTIONS_TO_CRAFT = {"Coins", "Mythic", "Lucky", "Speed"},  -- "Coins", "Mythic", "Lucky", "Speed" (Craft ALL Tiers)
-    RIFT_EGGS = {"Silly Egg", "Underworld Egg", "Cyber Egg"},  -- Add Any Egg Name
-    HATCH_1X_EGG = {"Cyber Egg"},  -- Hatch 1x Egg If No Rift & FARM_MIN_GEMS Completed
+    RIFT_EGGS = {"Underworld Egg"},  -- Add Any Egg Name
+    HATCH_1X_EGG = {"200M Egg"},  -- Hatch 1x Egg If No Rift & FARM_MIN_GEMS Completed
 
     FARM_MIN_GEMS = 1000000,  -- Farms Minimum Gems Before Hatching 1x Egg
     MIN_COINS_BEFORE_HATCHING = 3000000000,  -- Doesn't affect fresh account grind
