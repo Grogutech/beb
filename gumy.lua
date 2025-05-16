@@ -14,7 +14,7 @@ local defaultConfig = {
     AUTO_UPDATE_RESTART = true,  -- Auto restart after important updates #update channel
     ADD_FRIEND = false, -- Send friend request to everyone in server
     ENABLE_EXIT = false, -- Pressing "X" will exit game, less performance
-    DO_BUBBLE_GUM = true,  -- Auto blow/sell/upgrade bubble gum & storage [Stops selling when max coins]
+    DO_BUBBLE_GUM = false,  -- Auto blow/sell/upgrade bubble gum & storage [Stops selling when max coins]
     USE_ROYAL_KEY = false,
     USE_GOLDEN_KEY = false,
     USE_MYSTERY_BOX = false,
@@ -58,7 +58,7 @@ local defaultConfig = {
     IGNORE_STARTER_HATCH = false,  -- Ignore Starter Hatch (For P2W/Progressed Accounts)
     PURCHASE_BLACKMARKET = false,  -- Purchase All Blackmarket Items
     PURCHASE_ALIENSHOP = true,  -- Purchase All Alien Shop Items
-    PURCHASE_DICE_MERCHANT = false,  -- Purchase All Dice Merchant Items
+    PURCHASE_DICE_MERCHANT = true,  -- Purchase All Dice Merchant Items
 
     RESTOCK_SHOP = "Blackmarket", -- ("Blackmarket", "Alien Shop", "Dice Merchant") -> Reroll specified shop after buying all 3 slots 
     POTIONS_TO_CRAFT = {"Coins", "Mythic", "Lucky", "Speed"},  -- "Coins", "Mythic", "Lucky", "Speed" (Craft ALL Tiers)
