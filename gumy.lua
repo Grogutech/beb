@@ -66,8 +66,8 @@ local defaultConfig = {
     HATCH_1X_EGG = {"Mining Egg"},  -- Hatch 1x Egg If No Rift & FARM_MIN_GEMS Completed
 
     FARM_MIN_GEMS = 1000000,  -- Farms Minimum Gems Before Hatching 1x Egg
-    MIN_COINS_BEFORE_HATCHING = 3000000000,  -- Doesn't affect fresh account grind
-    MIN_TICKETS_BEFORE_HATCHING = 1000000000,
+    MIN_COINS_BEFORE_HATCHING = 30000000,  -- Doesn't affect fresh account grind
+    MIN_TICKETS_BEFORE_HATCHING = 10000000,
 }
 
 local customConfigs = {
