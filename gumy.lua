@@ -47,7 +47,7 @@ local defaultConfig = {
 
     USE_GEMS_ENCHANT = true, -- Use gems to enchant tier 2/3 & secret (If no more reroll orbs left)
     ENCHANT_TEAMUP = true,  -- Works after legendary+ team
-    ENCHANT_TEAMUP_TIER = 5,  -- Works after legendary+ team
+    ENCHANT_TEAMUP_TIER = 1,  -- Works after legendary+ team
     ENCHANT_HIGH_ROLLER = true,
 
 
