@@ -38,7 +38,7 @@ local defaultConfig = {
 
     -- RARITY_TO_SHINY -> Shiny first, delete second (Shiny when max inventory)
     RARITY_TO_SHINY = {"Common", "Unique", "Rare", "Epic", "Legendary"},
-    PETS_TO_DELETE = {"Crimson Butterfly"},  -- Add Pets Name To Autodelete (Delete when max inventory)
+    PETS_TO_DELETE = {"Crimson Butterfly", "Crystal Unicorn"},  -- Add Pets Name To Autodelete (Delete when max inventory)
     -- RARITY_TO_DELETE -> Common, Unique, Rare, Epic, Legendary (Delete when max inventory)
     RARITY_TO_DELETE = {"Common", "Unique", "Rare", "Epic", "Legendary"},  
     DELETE_LEGENDARY_SHINY = true,  -- Include "Legendary" in RARITY_TO_DELETE
