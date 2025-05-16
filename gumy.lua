@@ -26,7 +26,7 @@ local defaultConfig = {
     INFINITY_EGG_TYPE = "World1", -- "World1" -> Overworld | "World2" -> Minigame Paradise
     ALWAYS_INFINITY_ELIXIR = true,  -- Always keep infinity elixir active
     IGNORE_EQUIP_BEST_PET = false,
-    AUTO_BOUNTY_RIFT = true, -- Auto add current bounty rift to RIFT_EGGS [Updates Daily]
+    AUTO_BOUNTY_RIFT = false, -- Auto add current bounty rift to RIFT_EGGS [Updates Daily]
     
     SHOW_PET_WEBHOOK_USERNAME = true,  -- shows username in private webhook only
     WEBHOOK_ODDS = 15500,  -- minimum odds to send webhook
@@ -62,8 +62,8 @@ local defaultConfig = {
 
     RESTOCK_SHOP = "Blackmarket", -- ("Blackmarket", "Alien Shop", "Dice Merchant") -> Reroll specified shop after buying all 3 slots 
     POTIONS_TO_CRAFT = {"Coins", "Mythic", "Lucky", "Speed"},  -- "Coins", "Mythic", "Lucky", "Speed" (Craft ALL Tiers)
-    RIFT_EGGS = {"Mining Egg"},  -- Add Any Egg Name
-    HATCH_1X_EGG = {"Mining Egg"},  -- Hatch 1x Egg If No Rift & FARM_MIN_GEMS Completed
+    RIFT_EGGS = {""},  -- Add Any Egg Name
+    HATCH_1X_EGG = {"200M Egg"},  -- Hatch 1x Egg If No Rift & FARM_MIN_GEMS Completed
 
     FARM_MIN_GEMS = 1000000,  -- Farms Minimum Gems Before Hatching 1x Egg
     MIN_COINS_BEFORE_HATCHING = 30000000,  -- Doesn't affect fresh account grind
