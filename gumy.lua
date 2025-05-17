@@ -15,10 +15,10 @@ local defaultConfig = {
     ADD_FRIEND = false, -- Send friend request to everyone in server
     ENABLE_EXIT = false, -- Pressing "X" will exit game, less performance
     DO_BUBBLE_GUM = false,  -- Auto blow/sell/upgrade bubble gum & storage [Stops selling when max coins]
-    USE_ROYAL_KEY = false,
-    USE_GOLDEN_KEY = false,
-    USE_MYSTERY_BOX = false,
-    IGNORE_MYSTERY_BOX_GEM_CAP = false,  -- true = Use Mystery Box Even When Gems Capped
+    USE_ROYAL_KEY = true,
+    USE_GOLDEN_KEY = true,
+    USE_MYSTERY_BOX = true,
+    IGNORE_MYSTERY_BOX_GEM_CAP = true,  -- true = Use Mystery Box Even When Gems Capped
     HATCH_INFERNO_CUBE_AMOUNT = 6,  -- Legendary Team (For Fresh Accounts)
     PURCHASE_STARSHOP_SLOT = 14,  -- Purchase starshop if u have enough points
     IGNORE_GIANT_VOID_CHEST = true,
@@ -26,7 +26,7 @@ local defaultConfig = {
     INFINITY_EGG_TYPE = "World1", -- "World1" -> Overworld | "World2" -> Minigame Paradise
     ALWAYS_INFINITY_ELIXIR = true,  -- Always keep infinity elixir active
     IGNORE_EQUIP_BEST_PET = false,
-    AUTO_BOUNTY_RIFT = false, -- Auto add current bounty rift to RIFT_EGGS [Updates Daily]
+    AUTO_BOUNTY_RIFT = true, -- Auto add current bounty rift to RIFT_EGGS [Updates Daily]
     
     SHOW_PET_WEBHOOK_USERNAME = true,  -- shows username in private webhook only
     WEBHOOK_ODDS = 15500,  -- minimum odds to send webhook
