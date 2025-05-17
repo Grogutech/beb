@@ -1,3 +1,5 @@
+script_key="";
+
 getgenv().Settings = {
     ["Open Egg"] = "200M Egg",
 
