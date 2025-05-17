@@ -1,4 +1,4 @@
-setfpscap(15)
+setfpscap(10)
 wait(15)
 
 local Players = game:GetService("Players")
@@ -9,25 +9,6 @@ while not localPlayer do
 end
 
 local playerName = localPlayer.Name
-
-local whitelistedPlayers = {
-    ["fondasher67"] = true,
-    ["WorriedMag64"] = true,
-    ["Wakefulmahalia49"] = true,
-    ["bachittargrumpy"] = true,
-    ["empathicAlfred"] = true,
-    ["Valliermellow64"] = true,
-    ["PleasedFranc19"] = true,
-    ["desiraePuzzled"] = true,
-    ["sandithrilled41"] = true,
-    ["tacosJealous9"] = true
-}
-
-if whitelistedPlayers[playerName] then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Grogutech/beb/refs/heads/main/gum.lua"))()
-    return 
-end
-
 
 local defaultConfig = {
     AUTO_UPDATE_RESTART = true,  -- Auto restart after important updates #update channel
