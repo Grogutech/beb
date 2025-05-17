@@ -11,7 +11,7 @@ end
 local playerName = localPlayer.Name
 
 local defaultConfig = {
-    AUTO_UPDATE_RESTART = true,  -- Auto restart after important updates #update channel
+    AUTO_UPDATE_RESTART = false,  -- Auto restart after important updates #update channel
     ADD_FRIEND = false, -- Send friend request to everyone in server
     ENABLE_EXIT = false, -- Pressing "X" will exit game, less performance
     DO_BUBBLE_GUM = false,  -- Auto blow/sell/upgrade bubble gum & storage [Stops selling when max coins]
