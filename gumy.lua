@@ -31,6 +31,7 @@ local defaultConfig = {
     SHOW_PET_WEBHOOK_USERNAME = true,  -- shows username in private webhook only
     WEBHOOK_ODDS = 15500,  -- minimum odds to send webhook
     WEBHOOK_URL = dc_webhook,
+    DISCORD_ID = "314107374715535370",
     
     USE_DICE_KEY = false,
     IGNORE_MINIGAME = true,  -- Ignore all "world 2" mini games
