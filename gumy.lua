@@ -29,7 +29,7 @@ local defaultConfig = {
     AUTO_BOUNTY_RIFT = false, -- Auto add current bounty rift to RIFT_EGGS [Updates Daily]
     
     SHOW_PET_WEBHOOK_USERNAME = true,  -- shows username in private webhook only
-    WEBHOOK_ODDS = 15500,  -- minimum odds to send webhook
+    WEBHOOK_ODDS = 5000,  -- minimum odds to send webhook
     WEBHOOK_URL = dc_webhook,
     DISCORD_ID = "314107374715535370",
     
