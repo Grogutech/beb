@@ -63,8 +63,8 @@ local defaultConfig = {
 
     RESTOCK_SHOP = "Blackmarket", -- ("Blackmarket", "Alien Shop", "Dice Merchant") -> Reroll specified shop after buying all 3 slots 
     POTIONS_TO_CRAFT = {"Coins", "Mythic", "Lucky", "Speed"},  -- "Coins", "Mythic", "Lucky", "Speed" (Craft ALL Tiers)
-    RIFT_EGGS = {""},  -- Add Any Egg Name
-    HATCH_1X_EGG = {"200M Egg"},  -- Hatch 1x Egg If No Rift & FARM_MIN_GEMS Completed
+    RIFT_EGGS = {"Nightmare Egg", "Common Egg", "Cyber Egg"},  -- Add Any Egg Name
+    HATCH_1X_EGG = {"Infinity Egg"},  -- Hatch 1x Egg If No Rift & FARM_MIN_GEMS Completed
 }
 
 local customConfigs = {
