@@ -22,7 +22,7 @@ local defaultConfig = {
     HATCH_INFERNO_CUBE_AMOUNT = 6,  -- Legendary Team (For Fresh Accounts)
     PURCHASE_STARSHOP_SLOT = 14,  -- Purchase starshop if u have enough points
     IGNORE_GIANT_VOID_CHEST = true,
-    SERVERHOP_EGG = false, -- Serverhop until HATCH_1X_EGG egg found
+    SERVERHOP_EGG = true, -- Serverhop until HATCH_1X_EGG egg found
     INFINITY_EGG_TYPE = "World2", -- "World1" -> Overworld | "World2" -> Minigame Paradise
     ALWAYS_INFINITY_ELIXIR = true,  -- Always keep infinity elixir active
     IGNORE_EQUIP_BEST_PET = false,
@@ -63,8 +63,8 @@ local defaultConfig = {
 
     RESTOCK_SHOP = "Blackmarket", -- ("Blackmarket", "Alien Shop", "Dice Merchant") -> Reroll specified shop after buying all 3 slots 
     POTIONS_TO_CRAFT = {"Coins", "Mythic", "Lucky", "Speed"},  -- "Coins", "Mythic", "Lucky", "Speed" (Craft ALL Tiers)
-    RIFT_EGGS = {"Neon Egg", "Cyber Egg", "Nightmare Egg" },  -- Add Any Egg Name
-    HATCH_1X_EGG = {"Infinity Egg"},  -- Hatch 1x Egg If No Rift & FARM_MIN_GEMS Completed
+    RIFT_EGGS = {"Underworld Egg", "Neon Egg", "Nightmare Egg", "Cyber Egg", },  -- Add Any Egg Name
+    HATCH_1X_EGG = {"Chance Egg", "Infinity Egg"},  -- Hatch 1x Egg If No Rift & FARM_MIN_GEMS Completed
 }
 
 local customConfigs = {
