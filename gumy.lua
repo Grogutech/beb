@@ -34,8 +34,8 @@ local defaultConfig = {
     DISCORD_ID = "314107374715535370",
     
     USE_DICE_KEY = false,
-    IGNORE_MINIGAME = false,  -- Ignore all "world 2" mini games
-    SKIP_MINIGAME = "Hyper Darts",  -- Use Super Ticket -> "Pet Match" | "Cart Escape" | "Robot Claw"
+    IGNORE_MINIGAME = true,  -- Ignore all "world 2" mini games
+    SKIP_MINIGAME = "",  -- Use Super Ticket -> "Pet Match" | "Cart Escape" | "Robot Claw"
 
     -- RARITY_TO_SHINY -> Shiny first, delete second (Shiny when max inventory)
     RARITY_TO_SHINY = {"Common", "Unique", "Rare", "Epic", "Legendary"},
