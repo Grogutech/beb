@@ -37,7 +37,7 @@ local defaultConfig = {
     SKIP_MINIGAME = "",  -- Use Super Ticket -> "Pet Match" | "Cart Escape" | "Robot Claw"
 
     -- RARITY_TO_SHINY -> Shiny first, delete second (Shiny when max inventory)
-    RARITY_TO_SHINY = {"Common", "Unique", "Rare", "Epic", "Legendary"},
+    RARITY_TO_SHINY = {"Legendary"},
     PETS_TO_DELETE = {"Crimson Butterfly", "Crystal Unicorn"},  -- Add Pets Name To Autodelete (Delete when max inventory)
     -- RARITY_TO_DELETE -> Common, Unique, Rare, Epic, Legendary (Delete when max inventory)
     RARITY_TO_DELETE = {"Common", "Unique", "Rare", "Epic", "Legendary"},  
