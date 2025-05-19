@@ -13,18 +13,14 @@ local defaultConfig = {
     AUTO_UPDATE_RESTART = true,  -- Auto restart after important updates #update channel
     ADD_FRIEND = false, -- Send friend request to everyone in server
     ENABLE_EXIT = false, -- Pressing "X" will exit game, less performance
-    DO_BUBBLE_GUM = false,  -- Auto blow/sell/upgrade bubble gum & storage [Stops selling when max coins]
     USE_ROYAL_KEY = true,
-    USE_GOLDEN_KEY = false,
+    USE_GOLDEN_KEY = true,
     USE_MYSTERY_BOX = true,
     IGNORE_MYSTERY_BOX_GEM_CAP = true,  -- true = Use Mystery Box Even When Gems Capped
-    HATCH_INFERNO_CUBE_AMOUNT = 6,  -- Legendary Team (For Fresh Accounts)
-    PURCHASE_STARSHOP_SLOT = 14,  -- Purchase starshop if u have enough points
     IGNORE_GIANT_VOID_CHEST = true,
     
     INFINITY_EGG_TYPE = "World2", -- "World1" -> Overworld | "World2" -> Minigame Paradise
     ALWAYS_INFINITY_ELIXIR = true,  -- Always keep infinity elixir active
-    IGNORE_EQUIP_BEST_PET = false,
     AUTO_BOUNTY_RIFT = false, -- Auto add current bounty rift to RIFT_EGGS [Updates Daily]
     
     SHOW_PET_WEBHOOK_USERNAME = true,  -- shows username in private webhook only
@@ -32,7 +28,7 @@ local defaultConfig = {
     WEBHOOK_URL = dc_webhook,
     DISCORD_ID = "314107374715535370",
     
-    USE_DICE_KEY = false,
+    USE_DICE_KEY = true,
     IGNORE_MINIGAME = true,  -- Ignore all "world 2" mini games
     SKIP_MINIGAME = "",  -- Use Super Ticket -> "Pet Match" | "Cart Escape" | "Robot Claw"
 
@@ -50,13 +46,8 @@ local defaultConfig = {
     ENCHANT_TEAMUP_TIER = 1,  -- Works after legendary+ team
     ENCHANT_HIGH_ROLLER = true,
 
-
-    MASTERY_PETS_LEVEL = 15,   -- Pets Mastery Level To Reach Before Hatching Secret Etc
-    MASTERY_BUFFS_LEVEL = 15,  -- Buffs Mastery Level To Reach Before Hatching Secret Etc
-    MASTERY_SHOPS_LEVEL = 10,  -- Shops Mastery Level To Reach Before Hatching Secret Etc
-    MASTERY_MINIGAME_LEVEL = 1,
     IGNORE_STARTER_HATCH = false,  -- Ignore Starter Hatch (For P2W/Progressed Accounts)
-    PURCHASE_BLACKMARKET = false,  -- Purchase All Blackmarket Items
+    PURCHASE_BLACKMARKET = true,  -- Purchase All Blackmarket Items
     PURCHASE_ALIENSHOP = false,  -- Purchase All Alien Shop Items
     PURCHASE_DICE_MERCHANT = true,  -- Purchase All Dice Merchant Items
 
